@@ -1,0 +1,18 @@
+{
+  "dataset": "junyi",
+  "rule": "UNCHANGED from the pre-registration: comparator ranks outside the top 3 within session AND first at every adequate real gap horizon, on the confirmatory seed",
+  "archived": {
+    "comparator": "DKVMN",
+    "confirmed": false
+  },
+  "corrected": {
+    "comparator": "DKVMN",
+    "confirmed": false,
+    "adequate_horizons": [
+      "d1",
+      "d7",
+      "d28"
+    ]
+  },
+  "verdict_changed": false
+}

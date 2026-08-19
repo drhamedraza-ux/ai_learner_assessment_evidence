@@ -1,0 +1,135 @@
+{
+  "run_id": "RQ4FIX__assistments_2021",
+  "description": "RQ4 re-verdict with corrected DKVMN \u2014 assistments_2021",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 19:40:56",
+  "finished": "2026-08-18 19:40:56",
+  "runtime_minutes": 0.0,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__assistments_2021",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": null,
+  "inputs": [
+    {
+      "label": "DKVMNFIX__assistments_2021__seed0/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__assistments_2021__seed0/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "691b6508e514a08b257a7b0530f413582ceddb58f90e12dbcd19860242859ce7",
+      "bytes": 1240,
+      "mtime": "2026-08-18 17:29:54"
+    },
+    {
+      "label": "DKVMNFIX__assistments_2021__seed1/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__assistments_2021__seed1/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "36eedfaa21745981fd9ff808e79c0ed42740eae8a64dab3fa0eadcaecf6932cd",
+      "bytes": 1243,
+      "mtime": "2026-08-18 17:38:02"
+    },
+    {
+      "label": "DKVMNFIX__assistments_2021__seed2/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__assistments_2021__seed2/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "162907251443d6af3f23683b29ea4f1fb7689570d4667bbdc6d969ee0c689880",
+      "bytes": 1244,
+      "mtime": "2026-08-18 17:39:45"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed0/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed0/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "691b6508e514a08b257a7b0530f413582ceddb58f90e12dbcd19860242859ce7",
+      "bytes": 1240,
+      "mtime": "2026-08-17 21:46:55"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed1/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed1/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "36eedfaa21745981fd9ff808e79c0ed42740eae8a64dab3fa0eadcaecf6932cd",
+      "bytes": 1243,
+      "mtime": "2026-08-17 21:47:54"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed2/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed2/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "162907251443d6af3f23683b29ea4f1fb7689570d4667bbdc6d969ee0c689880",
+      "bytes": 1244,
+      "mtime": "2026-08-17 21:52:02"
+    }
+  ],
+  "missing_inputs": [],
+  "n_outputs": 6,
+  "outputs": [
+    {
+      "path": "artifacts/verdict_rq4_corrected.json",
+      "bytes": 444,
+      "sha256": "75835cdecfc20098e02a5c5da3bd2b1c999d5ac5954ce1b026839b4973e9932d"
+    },
+    {
+      "path": "tables/table11_primary_rule_archived.csv",
+      "bytes": 322,
+      "sha256": "1eadb10ea5e83835e67721e1f845d03513548a9fde68ab33ace303cc6c687def"
+    },
+    {
+      "path": "tables/table11_primary_rule_archived.tex",
+      "bytes": 468,
+      "sha256": "900bc5f76049f809d776f30b39af2120ede3b40f3cd13cf90f50fd3f49a259c0"
+    },
+    {
+      "path": "tables/table11_primary_rule_corrected.csv",
+      "bytes": 322,
+      "sha256": "1eadb10ea5e83835e67721e1f845d03513548a9fde68ab33ace303cc6c687def"
+    },
+    {
+      "path": "tables/table11_primary_rule_corrected.tex",
+      "bytes": 468,
+      "sha256": "900bc5f76049f809d776f30b39af2120ede3b40f3cd13cf90f50fd3f49a259c0"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 2682,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {},
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ4 (corrected DKVMN)",
+  "dataset": "assistments_2021",
+  "verdict": {
+    "dataset": "assistments_2021",
+    "rule": "UNCHANGED from the pre-registration: comparator ranks outside the top 3 within session AND first at every adequate real gap horizon, on the confirmatory seed",
+    "archived": {
+      "comparator": "PCDT-noPsi",
+      "confirmed": false
+    },
+    "corrected": {
+      "comparator": "PCDT-noPsi",
+      "confirmed": false,
+      "adequate_horizons": [
+        "d1",
+        "d7"
+      ]
+    },
+    "verdict_changed": false
+  }
+}

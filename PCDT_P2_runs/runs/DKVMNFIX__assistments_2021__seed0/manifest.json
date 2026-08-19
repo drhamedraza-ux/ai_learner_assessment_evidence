@@ -1,0 +1,180 @@
+{
+  "run_id": "DKVMNFIX__assistments_2021__seed0",
+  "description": "DKVMN refit with corrected memory ordering \u2014 assistments_2021, seed 20260202",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 17:05:09",
+  "finished": "2026-08-18 18:01:59",
+  "runtime_minutes": 56.84,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__assistments_2021__seed0",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": null,
+  "inputs": [
+    {
+      "label": "RQ2RQ3__assistments_2021__seed0/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed0/tables/table1_bucket_counts.csv",
+      "present": true,
+      "sha256": "80aff7ae695be0c034b87a3d92c687c8057c65be5c1f0ae76c01a85c3d43510a",
+      "bytes": 138,
+      "mtime": "2026-08-17 21:46:55"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed0/predictions",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed0/artifacts/predictions_test.npz",
+      "present": true,
+      "sha256": "d932206e1800dc832db38cae59721e44a222cc2e508c3dfd0c0aa7f0d33703cd",
+      "bytes": 29036842,
+      "mtime": "2026-08-17 21:11:09"
+    },
+    {
+      "label": "src/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed0/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "078c597335d262aeef27b492e1be360813d0b479bab528ed3d79a1a1eb7a7023",
+      "bytes": 1282,
+      "mtime": "2026-08-17 21:46:55"
+    },
+    {
+      "label": "src/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed0/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "691b6508e514a08b257a7b0530f413582ceddb58f90e12dbcd19860242859ce7",
+      "bytes": 1240,
+      "mtime": "2026-08-17 21:46:55"
+    }
+  ],
+  "missing_inputs": [],
+  "n_outputs": 19,
+  "outputs": [
+    {
+      "path": "artifacts/model_DKVMN_corrected.pt",
+      "bytes": 1406267,
+      "sha256": "69d1664fb42b63778564f33caba4b526cf6870ce9d32d0a92a4120eea0a64c06"
+    },
+    {
+      "path": "artifacts/predictions_test_dkvmnfix.npz",
+      "bytes": 32888907,
+      "sha256": "cb9dc0fcc607c620df47c2ff42d512b2a3cd644c3f82a3b67f6eb2dfad7fe378"
+    },
+    {
+      "path": "tables/table1_bucket_counts.csv",
+      "bytes": 103,
+      "sha256": "d7e3413bd663b4e30dda911db92a7ff8035e6813b0ea77093e123b47d694c4d6"
+    },
+    {
+      "path": "tables/table1_bucket_counts.tex",
+      "bytes": 210,
+      "sha256": "b60f71f587a902694d8770805c029fe459d1d1e07350957b71e03317a511e8ea"
+    },
+    {
+      "path": "tables/table2_predictive.csv",
+      "bytes": 1283,
+      "sha256": "3657d0fe33de07a75e9435a3c6de7483e6ea9d83dabaf65be3ecb3d95c73f982"
+    },
+    {
+      "path": "tables/table2_predictive.tex",
+      "bytes": 883,
+      "sha256": "8a579678e04275fa6c8a0be523335f7502da56b0e61d42f02e1126d1690246a7"
+    },
+    {
+      "path": "tables/table3_statistics.csv",
+      "bytes": 693,
+      "sha256": "3d02b1714ec5305987ad2cec51f6a775c1cc0dc71f3646abf34932c62be70865"
+    },
+    {
+      "path": "tables/table3_statistics.tex",
+      "bytes": 623,
+      "sha256": "cfc12fdbe54768cec42f925887b0fb2eb4cc99b558ef1fa6047df8bd7c36a1ab"
+    },
+    {
+      "path": "tables/table5_persistence.csv",
+      "bytes": 729,
+      "sha256": "308eda60f2e6cb479553fe5a4f7e33d73548c0b360c4d3b779280c314b6747cd"
+    },
+    {
+      "path": "tables/table5_persistence.tex",
+      "bytes": 736,
+      "sha256": "cabb066108b709952bb393f35e681706507482e41f9fec9a3fe08f89cfe18b51"
+    },
+    {
+      "path": "tables/table6_educational_utility.csv",
+      "bytes": 4036,
+      "sha256": "c9970874dd236414c162f6e8857dc8119b78efed2648f6ae3a1b55f3e72e9048"
+    },
+    {
+      "path": "tables/table6_educational_utility.tex",
+      "bytes": 3450,
+      "sha256": "19ab191e5ae58006a51c2508e1186a0ea96ee1529aab718510fc37f6d0d17f8e"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.csv",
+      "bytes": 463,
+      "sha256": "97fc31d65108399dadb95a4ea483e051b5f3bfd6fb1bbd1b65e7b60fda6d0d43"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.tex",
+      "bytes": 427,
+      "sha256": "4a28373d44a99e547920a839befe42ae140497a5334d4c969195a4491bab9362"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.csv",
+      "bytes": 1240,
+      "sha256": "691b6508e514a08b257a7b0530f413582ceddb58f90e12dbcd19860242859ce7"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.tex",
+      "bytes": 1190,
+      "sha256": "d5d6b97eff382318fd6aa63072439759d6a809752a0bdee2074d2b1d090ef9eb"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap_dkvmnfix.pdf",
+      "bytes": 15450,
+      "sha256": "1a7fda75faabd5be2553313aa71c6fdfa53b0eaafa8fab26c47b0c2000a25c84"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap_dkvmnfix.png",
+      "bytes": 48527,
+      "sha256": "7bf0e0547bcdd4e5e632a093a1ecf1ea3079c73a86e3d3012a744649b9e22f30"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 7696,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "DKVMNFIX__assistments_2021__seed1": 10,
+    "DKVMNFIX__assistments_2021__seed2": 10
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ2+RQ3 (DKVMN corrected)",
+  "dataset": "assistments_2021",
+  "seed": 20260202,
+  "source_run": "RQ2RQ3__assistments_2021__seed0",
+  "dkvmn_legacy_lag": false,
+  "dkvmn_hidden": 182,
+  "dkvmn_params": 350351,
+  "dkvmn_lr": 0.002,
+  "dkvmn_val_auc": 0.750364891312979,
+  "dkvmn_auc_archived": 0.7432672832582099,
+  "dkvmn_auc_corrected": 0.7432672832582099,
+  "strongest_baseline": "DKT-F"
+}

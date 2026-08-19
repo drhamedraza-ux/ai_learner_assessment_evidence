@@ -1,0 +1,4 @@
+seed,role,n_models,comparator,comparator_within_rank,leg1_outside_top3,gap_leaders,leg2_first_all_gaps,divergence
+s1,exploratory,8,DKVMN,3,False,d1:DKVMN; d7:DKVMN; d28:DKVMN,True,False
+s2,exploratory,8,DKVMN,3,False,d1:DKVMN; d7:DKVMN; d28:DKVMN,True,False
+s3,CONFIRMATORY,8,DKVMN,3,False,d1:DKVMN; d7:DKVMN; d28:DKVMN,True,False

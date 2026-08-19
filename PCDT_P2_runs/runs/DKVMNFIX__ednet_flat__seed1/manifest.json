@@ -1,0 +1,182 @@
+{
+  "run_id": "DKVMNFIX__ednet_flat__seed1",
+  "description": "DKVMN refit with corrected memory ordering \u2014 ednet_flat, seed 20260203",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 18:09:21",
+  "finished": "2026-08-18 19:27:29",
+  "runtime_minutes": 78.14,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__ednet_flat__seed1",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": null,
+  "inputs": [
+    {
+      "label": "RQ2RQ3__ednet_flat__seed1/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed1/tables/table1_bucket_counts.csv",
+      "present": true,
+      "sha256": "051f00a2daa43495a2ba07b62936d2778479ae6924b4b617b5f8a79194e0c972",
+      "bytes": 137,
+      "mtime": "2026-08-18 12:28:36"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed1/predictions",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed1/artifacts/predictions_test.npz",
+      "present": true,
+      "sha256": "83e6ec6573b400b06a45f95499ed7865d018523681590b4e14ab791a860585fc",
+      "bytes": 29662231,
+      "mtime": "2026-08-18 11:41:26"
+    },
+    {
+      "label": "src/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed1/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "de9e177e6789c82f78d67729c75ccc1fded610b1e17e264118a51260d598a1ec",
+      "bytes": 1285,
+      "mtime": "2026-08-18 12:28:36"
+    },
+    {
+      "label": "src/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed1/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "6493cb61118a890d048544d85935c097e4240cbdd1086e03339fd2ae1e45f4f6",
+      "bytes": 1232,
+      "mtime": "2026-08-18 12:28:36"
+    }
+  ],
+  "missing_inputs": [],
+  "n_outputs": 19,
+  "outputs": [
+    {
+      "path": "artifacts/model_DKVMN_corrected.pt",
+      "bytes": 1404731,
+      "sha256": "7796df4156890d25d85dccf719b5f441e41e54cb19db9feacc18bb44e73440f9"
+    },
+    {
+      "path": "artifacts/predictions_test_dkvmnfix.npz",
+      "bytes": 33776866,
+      "sha256": "19de486f65e8204f2c347b6c744b8ade85c344810d419ee51e4c8228e2c02c22"
+    },
+    {
+      "path": "tables/table1_bucket_counts.csv",
+      "bytes": 102,
+      "sha256": "2d0fc164d6169ae4b20617a8e21f5580af635b3902f51f215d7c73be0a9ba757"
+    },
+    {
+      "path": "tables/table1_bucket_counts.tex",
+      "bytes": 209,
+      "sha256": "7defff7b57b4aa454e1a68a1a7a1b24aa33170a76fbd4856de71d21dbbbb0c53"
+    },
+    {
+      "path": "tables/table2_predictive.csv",
+      "bytes": 1283,
+      "sha256": "7459d0482288f603d803eea3e7dcfad35a9c7948e659a5939cb824e4a5ab727f"
+    },
+    {
+      "path": "tables/table2_predictive.tex",
+      "bytes": 883,
+      "sha256": "231e7da8585b2638bd8e023cc7e4a908f8a313361a8df90e8e045280bc7ebf7d"
+    },
+    {
+      "path": "tables/table3_statistics.csv",
+      "bytes": 703,
+      "sha256": "8256748789da32c7ef6196d84b700e235f78d4189799a10cf440f8731cdd13f8"
+    },
+    {
+      "path": "tables/table3_statistics.tex",
+      "bytes": 629,
+      "sha256": "e845da69a33dc872d7a4481b5ad33606cae09b8f396409b57e96a6bd6b393e2f"
+    },
+    {
+      "path": "tables/table5_persistence.csv",
+      "bytes": 1036,
+      "sha256": "02ad1c859fb8b14bbbcd8aa67ec88d5ec474cbe7208cae6594d39223d4f49504"
+    },
+    {
+      "path": "tables/table5_persistence.tex",
+      "bytes": 988,
+      "sha256": "97c8c1a474c3535813399ea0830300b206df679c26a8fe2f42af5f2c155728fa"
+    },
+    {
+      "path": "tables/table6_educational_utility.csv",
+      "bytes": 5979,
+      "sha256": "69b0bb18e7c1238b2ab74aed4ff0636487cc20c11eea5e29de4d19a9702f7f39"
+    },
+    {
+      "path": "tables/table6_educational_utility.tex",
+      "bytes": 5043,
+      "sha256": "959c0654fb7919b72fd50ed13014d29a8937c8e42f49edd7cc63fce84dfdbbce"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.csv",
+      "bytes": 465,
+      "sha256": "a4f71da8d268b2428b2b6b00963b65abdd7a3680459262261cf8d12f8da661ef"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.tex",
+      "bytes": 432,
+      "sha256": "58acbbcbe967d2f6b0bd0b581a3773ba7f7ca0c511b3ffb1e38904b340696696"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.csv",
+      "bytes": 1232,
+      "sha256": "6493cb61118a890d048544d85935c097e4240cbdd1086e03339fd2ae1e45f4f6"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.tex",
+      "bytes": 1182,
+      "sha256": "2f304ad66d5d90f4ecf674bc5ead2f67a16f9dbde5f79bd477e179920a181257"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap_dkvmnfix.pdf",
+      "bytes": 15948,
+      "sha256": "ef63c99ddaafbf90f1fe8442812890d150f3bf62dc8b63c84b0cdd573abc036f"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap_dkvmnfix.png",
+      "bytes": 47987,
+      "sha256": "166e878adeb76e86bc031bda4484fbf2d66bdd2733a07aac809d18a2141425f4"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 8131,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "DKVMNFIX__ednet_flat__seed0": 21,
+    "DKVMNFIX__ednet_flat__seed2": 10,
+    "DKVMNFIX__assistments_2021__seed2": 13,
+    "DKVMNFIX__junyi__seed0": 2
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ2+RQ3 (DKVMN corrected)",
+  "dataset": "ednet_flat",
+  "seed": 20260203,
+  "source_run": "RQ2RQ3__ednet_flat__seed1",
+  "dkvmn_legacy_lag": false,
+  "dkvmn_hidden": 240,
+  "dkvmn_params": 349921,
+  "dkvmn_lr": 0.001,
+  "dkvmn_val_auc": 0.7154960782223218,
+  "dkvmn_auc_archived": 0.7105721370605678,
+  "dkvmn_auc_corrected": 0.7105721370605678,
+  "strongest_baseline": "DKVMN"
+}

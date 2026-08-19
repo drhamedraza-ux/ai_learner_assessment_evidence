@@ -1,0 +1,4 @@
+seed,role,n_models,comparator,comparator_within_rank,leg1_outside_top3,gap_leaders,leg2_first_all_gaps,divergence
+s1,exploratory,8,PCDT-noPsi,2,False,d1:SAKT; d7:SAKT,False,False
+s2,exploratory,8,PCDT-noPsi,2,False,d1:DKT-F; d7:DKT-F,False,False
+s3,CONFIRMATORY,8,PCDT-noPsi,1,False,d1:DKT-F; d7:PCDT-noPsi,False,False

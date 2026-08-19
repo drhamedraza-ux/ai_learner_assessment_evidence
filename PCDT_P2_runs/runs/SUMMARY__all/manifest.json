@@ -1,0 +1,337 @@
+{
+  "run_id": "SUMMARY__all",
+  "description": "Cross-run summary \u2014 RQ1-RQ4, 3 datasets, 3 seeds",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 17:03:20",
+  "finished": "2026-08-18 17:03:21",
+  "runtime_minutes": 0.0,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/SUMMARY__all",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": null,
+  "inputs": [
+    {
+      "label": "RQ1__assistments_2021__seed0/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__assistments_2021__seed0/tables/table1_audit_assistments_2021.csv",
+      "present": true,
+      "sha256": "942badceb68e2b557261cf2b831141a24dfeaa3267a43566136c401ec3801e97",
+      "bytes": 1602,
+      "mtime": "2026-08-17 20:00:16"
+    },
+    {
+      "label": "RQ1__assistments_2021__seed1/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__assistments_2021__seed1/tables/table1_audit_assistments_2021.csv",
+      "present": true,
+      "sha256": "bc8728abf428d00605dd3f4ec61e22615fab81fe1eba036b893d588bbc0200ff",
+      "bytes": 1603,
+      "mtime": "2026-08-17 20:01:22"
+    },
+    {
+      "label": "RQ1__assistments_2021__seed2/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__assistments_2021__seed2/tables/table1_audit_assistments_2021.csv",
+      "present": true,
+      "sha256": "b0b008d94adbccd23fe67ee6796b244bfc1c21ccae97f6bd27ea7353b71e5731",
+      "bytes": 1589,
+      "mtime": "2026-08-17 20:01:30"
+    },
+    {
+      "label": "RQ1__ednet_flat__seed0/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__ednet_flat__seed0/tables/table1_audit_ednet_flat.csv",
+      "present": true,
+      "sha256": "003bb5a93dc55680c4910964794edc609ead45dead7d594b833a87825a1059a3",
+      "bytes": 1574,
+      "mtime": "2026-08-17 20:05:35"
+    },
+    {
+      "label": "RQ1__ednet_flat__seed1/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__ednet_flat__seed1/tables/table1_audit_ednet_flat.csv",
+      "present": true,
+      "sha256": "06e2ae3c55df4ed5b74991da6b6e85152ed6f8f136177046c44260f722344fe0",
+      "bytes": 1592,
+      "mtime": "2026-08-17 20:07:00"
+    },
+    {
+      "label": "RQ1__ednet_flat__seed2/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__ednet_flat__seed2/tables/table1_audit_ednet_flat.csv",
+      "present": true,
+      "sha256": "2ebad862a2b33d64b0c84d957c457fb59d1de4f6e3971ef4adfbf340e558eeb9",
+      "bytes": 1576,
+      "mtime": "2026-08-17 20:07:56"
+    },
+    {
+      "label": "RQ1__junyi__seed0/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__junyi__seed0/tables/table1_audit_junyi.csv",
+      "present": true,
+      "sha256": "b83024eb9818e89b6ea0f768def5a82f4365cdc98283cb1e5712ec6f81a61e24",
+      "bytes": 1592,
+      "mtime": "2026-08-17 20:08:49"
+    },
+    {
+      "label": "RQ1__junyi__seed1/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__junyi__seed1/tables/table1_audit_junyi.csv",
+      "present": true,
+      "sha256": "8d8c96606f38e30613c69ddfa42e0341fe4ebf8c8942d80e82fbc08f25121717",
+      "bytes": 1590,
+      "mtime": "2026-08-17 20:10:33"
+    },
+    {
+      "label": "RQ1__junyi__seed2/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__junyi__seed2/tables/table1_audit_junyi.csv",
+      "present": true,
+      "sha256": "77ecf2e29f5acb6ae791ff678f247c4e1c23e6eabfbca58866c3a9b2c0e64f24",
+      "bytes": 1579,
+      "mtime": "2026-08-17 20:11:14"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed0/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed0/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "078c597335d262aeef27b492e1be360813d0b479bab528ed3d79a1a1eb7a7023",
+      "bytes": 1282,
+      "mtime": "2026-08-17 21:46:55"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed1/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed1/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "fd1df3bbd27d78662a94a58827969437d1f46ee5f2730600f02de8b799d6832d",
+      "bytes": 1286,
+      "mtime": "2026-08-17 21:47:54"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed2/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed2/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "05af11eabd383944f22b0404a46b511cd7848e64078dad23d81106ea67d4faaa",
+      "bytes": 1288,
+      "mtime": "2026-08-17 21:52:02"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed0/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed0/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "011132f9f0546f88179f28316d9315974674b5e49fbcdaab9f38a1786cd269c9",
+      "bytes": 1285,
+      "mtime": "2026-08-18 12:25:04"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed1/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed1/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "de9e177e6789c82f78d67729c75ccc1fded610b1e17e264118a51260d598a1ec",
+      "bytes": 1285,
+      "mtime": "2026-08-18 12:28:36"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed2/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed2/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "a0eb699e35c04504be5eb27b2e97956fa2b6f47f6b9315c3798dfab9797633d3",
+      "bytes": 1293,
+      "mtime": "2026-08-18 12:30:04"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed0/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed0/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "cd4016362897dbbd54220a00dd5b133923e6ffa2840c4ec762e3fb273d6a5936",
+      "bytes": 1278,
+      "mtime": "2026-08-18 16:29:50"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed1/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed1/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "65a2e2cb87797304b453cab67334e786ce980872c642e56a299e7be1279993cf",
+      "bytes": 1276,
+      "mtime": "2026-08-18 16:29:34"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed2/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed2/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "b6f136bb0d07a09de566e40cbc6b384d5872d16e293a1bcdd4281d2ce7a8f881",
+      "bytes": 1273,
+      "mtime": "2026-08-18 16:33:20"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed0/table5",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed0/tables/table5_persistence.csv",
+      "present": true,
+      "sha256": "308eda60f2e6cb479553fe5a4f7e33d73548c0b360c4d3b779280c314b6747cd",
+      "bytes": 729,
+      "mtime": "2026-08-17 21:46:55"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed1/table5",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed1/tables/table5_persistence.csv",
+      "present": true,
+      "sha256": "a883c2f24b6b8bf9d2a23b2c97d42ac328098a0c9f36a90193eb0a17f32c2fce",
+      "bytes": 726,
+      "mtime": "2026-08-17 21:47:54"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed2/table5",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed2/tables/table5_persistence.csv",
+      "present": true,
+      "sha256": "09c86f1fd91f224ab11c6b842e90ceb62f799515e459e6e1e46da7eb7f1b10f8",
+      "bytes": 729,
+      "mtime": "2026-08-17 21:52:02"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed0/table5",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed0/tables/table5_persistence.csv",
+      "present": true,
+      "sha256": "0bba1e29423d663dab9b4ee0e4652d79d75f2d3061db5fa0d6469fe382e134eb",
+      "bytes": 1034,
+      "mtime": "2026-08-18 12:25:04"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed1/table5",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed1/tables/table5_persistence.csv",
+      "present": true,
+      "sha256": "02ad1c859fb8b14bbbcd8aa67ec88d5ec474cbe7208cae6594d39223d4f49504",
+      "bytes": 1036,
+      "mtime": "2026-08-18 12:28:36"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed2/table5",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed2/tables/table5_persistence.csv",
+      "present": true,
+      "sha256": "54bf058d0f7f504153e5e81e5e7176bf7ba1bad29c5d453250fb0bdc9c32670a",
+      "bytes": 1035,
+      "mtime": "2026-08-18 12:30:04"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed0/table5",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed0/tables/table5_persistence.csv",
+      "present": true,
+      "sha256": "4d9003b6aa06edd7e2a209741b6561203469bdbf8cf3c0ac338469dccb7a2e96",
+      "bytes": 1305,
+      "mtime": "2026-08-18 16:29:50"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed1/table5",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed1/tables/table5_persistence.csv",
+      "present": true,
+      "sha256": "8325a442e25bac6b55c87193a56a32ebe085c738affc5dfb1862cf168f4cf304",
+      "bytes": 1296,
+      "mtime": "2026-08-18 16:29:34"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed2/table5",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed2/tables/table5_persistence.csv",
+      "present": true,
+      "sha256": "7391ba9e1c7eb2bec90fa8aa48085da1d9f1f5f7b5daac506b6640989e64bdad",
+      "bytes": 1299,
+      "mtime": "2026-08-18 16:33:20"
+    },
+    {
+      "label": "RQ4__assistments_2021/verdict",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4__assistments_2021/artifacts/verdict_rq4.json",
+      "present": true,
+      "sha256": "f39ee27eddef1720bef7f223b25368ee2b625c82c6b5b06ac074a1121f5f91fe",
+      "bytes": 2006,
+      "mtime": "2026-08-18 13:23:32"
+    },
+    {
+      "label": "RQ4__ednet_flat/verdict",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4__ednet_flat/artifacts/verdict_rq4.json",
+      "present": true,
+      "sha256": "687443b4f80ec449734d712f1be9c8f2ca5ec1f670529234def653b01c7a705c",
+      "bytes": 1978,
+      "mtime": "2026-08-18 13:36:19"
+    },
+    {
+      "label": "RQ4__junyi/verdict",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4__junyi/artifacts/verdict_rq4.json",
+      "present": true,
+      "sha256": "332fc096759bfffc239a05c1534aa5cc3d608db96308855ead01e05fec4c419b",
+      "bytes": 1957,
+      "mtime": "2026-08-18 16:50:25"
+    }
+  ],
+  "missing_inputs": [],
+  "n_outputs": 11,
+  "outputs": [
+    {
+      "path": "tables/summary_inventory.csv",
+      "bytes": 1828,
+      "sha256": "c2233aa9f6b06b12bd94cf990e44f57a0e945a6729a380195266c342d4d36281"
+    },
+    {
+      "path": "tables/summary_inventory.tex",
+      "bytes": 2577,
+      "sha256": "573e038fda9b4e173e8a0493f09106d7293f1b3ea25b458d0ba87f7876fbb927"
+    },
+    {
+      "path": "tables/summary_rq1_verdicts.csv",
+      "bytes": 3479,
+      "sha256": "f3403c9ca9bfb6e22128d5604b0e33058cb4109b539372526996e1fcc9616835"
+    },
+    {
+      "path": "tables/summary_rq1_verdicts.tex",
+      "bytes": 3600,
+      "sha256": "66fdb260afb7e61912ed84f45a22acdc8741055a6583b463f64b401a9e38703b"
+    },
+    {
+      "path": "tables/summary_rq2_cross_seed.csv",
+      "bytes": 1108,
+      "sha256": "6000d170da695528f207027fc9ac9a14cd7037048193a5575b93189e89420b98"
+    },
+    {
+      "path": "tables/summary_rq2_cross_seed.tex",
+      "bytes": 1009,
+      "sha256": "072b58357e227c78312c67a81ff7ccf02202ac1741a181b9e15a23b4490a9dc3"
+    },
+    {
+      "path": "tables/summary_rq3_cross_seed.csv",
+      "bytes": 6179,
+      "sha256": "b786911093066ef2aa5c140fb51559ec32f2326952e7c6a1afb8858520f0537f"
+    },
+    {
+      "path": "tables/summary_rq3_cross_seed.tex",
+      "bytes": 5342,
+      "sha256": "60a9e9a95f7c34e6b673dfaf5c37eeb68f73687c0f02409788e7a62d8c1b702d"
+    },
+    {
+      "path": "tables/summary_rq4_by_dataset.csv",
+      "bytes": 462,
+      "sha256": "bdebc06419a6d305c1ca7f411a08766e74660e7af9a6bb5b7bce3531c3e4e4b0"
+    },
+    {
+      "path": "tables/summary_rq4_by_dataset.tex",
+      "bytes": 599,
+      "sha256": "8c4b87270f11fadc166c72560a04bec22a059aad99010c0ab2738fe491ccba3b"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 12917,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {},
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "reporting_rule": "RQ2/RQ3 reported on the pre-registered primary seed 20260202; other seeds are robustness evidence; cross-seed disagreement is reported, not resolved",
+  "primary_seed": 20260202,
+  "runs_expected": 21,
+  "runs_present": 21
+}

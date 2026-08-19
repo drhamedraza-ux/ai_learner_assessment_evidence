@@ -1,0 +1,4 @@
+seed,role,comparator,comparator_within_rank,leg1_outside_top3,gap_leaders,leg2_first_all_gaps,divergence
+20260202,exploratory,PCDT-noPsi,2,False,d1:SAKT; d7:SAKT,False,False
+20260203,exploratory,PCDT-noPsi,2,False,d1:DKT-F; d7:DKT-F,False,False
+20260204,confirmatory,PCDT-noPsi,1,False,d1:DKT-F; d7:PCDT-noPsi,False,False

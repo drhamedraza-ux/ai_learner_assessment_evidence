@@ -1,0 +1,41 @@
+==============================================================================
+RUN RQ4FIX__assistments_2021
+RQ4 re-verdict with corrected DKVMN — assistments_2021
+started   2026-08-18 19:40:56   pid 868264
+writes to /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__assistments_2021
+reads     DKVMNFIX__assistments_2021__seed0/table9, DKVMNFIX__assistments_2021__seed1/table9, DKVMNFIX__assistments_2021__seed2/table9
+concurrent runs detected: DKVMNFIX__junyi__seed0, DKVMNFIX__junyi__seed1, DKVMNFIX__junyi__seed2
+  (parallel execution is supported and expected — see RUN_ORDER.md)
+==============================================================================
+  read input     DKVMNFIX__assistments_2021__seed0/table9
+  read input     DKVMNFIX__assistments_2021__seed1/table9
+  read input     DKVMNFIX__assistments_2021__seed2/table9
+  read input     RQ2RQ3__assistments_2021__seed0/table9
+  read input     RQ2RQ3__assistments_2021__seed1/table9
+  read input     RQ2RQ3__assistments_2021__seed2/table9
+=== ARCHIVED (DKVMN reading one interaction short) ===
+    seed         role comparator  comparator_within_rank  leg1_outside_top3             gap_leaders  leg2_first_all_gaps  divergence
+20260202  exploratory PCDT-noPsi                       2              False        d1:SAKT; d7:SAKT                False       False
+20260203  exploratory PCDT-noPsi                       2              False      d1:DKT-F; d7:DKT-F                False       False
+20260204 confirmatory PCDT-noPsi                       1              False d1:DKT-F; d7:PCDT-noPsi                False       False
+
+=== CORRECTED ===
+    seed         role comparator  comparator_within_rank  leg1_outside_top3             gap_leaders  leg2_first_all_gaps  divergence
+20260202  exploratory PCDT-noPsi                       2              False        d1:SAKT; d7:SAKT                False       False
+20260203  exploratory PCDT-noPsi                       2              False      d1:DKT-F; d7:DKT-F                False       False
+20260204 confirmatory PCDT-noPsi                       1              False d1:DKT-F; d7:PCDT-noPsi                False       False
+
+==============================================================================
+RQ4 on assistments_2021:  archived NOT CONFIRMED (comparator PCDT-noPsi)  ->  corrected NOT CONFIRMED (comparator PCDT-noPsi)
+==============================================================================
+Verdict and comparator both unchanged: the finding survives the correction.
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__assistments_2021/tables: ['table11_primary_rule_archived', 'table11_primary_rule_corrected']
+
+==============================================================================
+RUN RQ4FIX__assistments_2021 — complete
+  runtime        0.0 min
+  files written  6
+  inputs read    6 (0 missing)
+  isolation      OK — no finished run was modified
+  manifest       /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__assistments_2021/manifest.json
+==============================================================================

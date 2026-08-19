@@ -1,0 +1,183 @@
+{
+  "run_id": "DKVMNFIX__assistments_2021__seed2",
+  "description": "DKVMN refit with corrected memory ordering \u2014 assistments_2021, seed 20260204",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 17:13:00",
+  "finished": "2026-08-18 18:11:20",
+  "runtime_minutes": 58.33,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__assistments_2021__seed2",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": null,
+  "inputs": [
+    {
+      "label": "RQ2RQ3__assistments_2021__seed2/table1",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed2/tables/table1_bucket_counts.csv",
+      "present": true,
+      "sha256": "32e627a72a40d4c872d1889dd2968e1c5bfe866d597730e9dd084bb4ea0674aa",
+      "bytes": 138,
+      "mtime": "2026-08-17 21:52:02"
+    },
+    {
+      "label": "RQ2RQ3__assistments_2021__seed2/predictions",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed2/artifacts/predictions_test.npz",
+      "present": true,
+      "sha256": "bfc85b6fdea7434df7f1093b2b0876c98e17bf2700406c96adf6c583fcc7423e",
+      "bytes": 27984748,
+      "mtime": "2026-08-17 21:16:17"
+    },
+    {
+      "label": "src/table2",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed2/tables/table2_predictive.csv",
+      "present": true,
+      "sha256": "05af11eabd383944f22b0404a46b511cd7848e64078dad23d81106ea67d4faaa",
+      "bytes": 1288,
+      "mtime": "2026-08-17 21:52:02"
+    },
+    {
+      "label": "src/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed2/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "162907251443d6af3f23683b29ea4f1fb7689570d4667bbdc6d969ee0c689880",
+      "bytes": 1244,
+      "mtime": "2026-08-17 21:52:02"
+    }
+  ],
+  "missing_inputs": [],
+  "n_outputs": 19,
+  "outputs": [
+    {
+      "path": "artifacts/model_DKVMN_corrected.pt",
+      "bytes": 1404027,
+      "sha256": "9a988e3e77d8da09f68419461d040568f3f2a4c25e9bc3a9ddfed2bf38f451df"
+    },
+    {
+      "path": "artifacts/predictions_test_dkvmnfix.npz",
+      "bytes": 31763957,
+      "sha256": "e0b17c4759eb5c82c09d3b2d705ae7732ace1590236dbec695d9c46f253e72f9"
+    },
+    {
+      "path": "tables/table1_bucket_counts.csv",
+      "bytes": 103,
+      "sha256": "cf1329c189fbf458376183d47b27160b6cfcaf527d8a2d10d0e09d51587a3bf2"
+    },
+    {
+      "path": "tables/table1_bucket_counts.tex",
+      "bytes": 210,
+      "sha256": "6261cbafc952f313ab299be2a739fd705f341d2df4690576c0a0d44623ae7018"
+    },
+    {
+      "path": "tables/table2_predictive.csv",
+      "bytes": 1287,
+      "sha256": "379dc891d291c867cf34cb7eb27f48eae9ab4a23335d6e148bb741aa37d1a579"
+    },
+    {
+      "path": "tables/table2_predictive.tex",
+      "bytes": 883,
+      "sha256": "bd772a4a6a5fd9796af31e3f288d62bfc20099b31971fb264bb3324e6b6fbae3"
+    },
+    {
+      "path": "tables/table3_statistics.csv",
+      "bytes": 701,
+      "sha256": "31cade2c643de09f3fdf45cc76fac8580187b3987b20afa8d5f6fa5424bc940b"
+    },
+    {
+      "path": "tables/table3_statistics.tex",
+      "bytes": 629,
+      "sha256": "0ab7d867a736bc5681742bc2a0b36f73716bd92fdfcec6eeb997159c9f033bcc"
+    },
+    {
+      "path": "tables/table5_persistence.csv",
+      "bytes": 729,
+      "sha256": "09c86f1fd91f224ab11c6b842e90ceb62f799515e459e6e1e46da7eb7f1b10f8"
+    },
+    {
+      "path": "tables/table5_persistence.tex",
+      "bytes": 735,
+      "sha256": "a9b14197e2c3f06570b4fd785ea8ce7b0ce070e05933a96b47e2fcebe5d0eabd"
+    },
+    {
+      "path": "tables/table6_educational_utility.csv",
+      "bytes": 4031,
+      "sha256": "a2f8464e190028587c3c7fde036957e2ee3e858401055ce0c659d739ec463e3e"
+    },
+    {
+      "path": "tables/table6_educational_utility.tex",
+      "bytes": 3472,
+      "sha256": "db385eb11cd9fdc5c9ad870605c14f55e02ddbc8bffd5293e77310a6fec82d91"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.csv",
+      "bytes": 470,
+      "sha256": "9bed15b8c928427c7707616ba8d3846e309a5dfceaacbc9a85b81e315a0e34a7"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.tex",
+      "bytes": 433,
+      "sha256": "641049953ef2bb04d0759f09219f5a544861e3fda68fb1d9c0c8fea02dc6282a"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.csv",
+      "bytes": 1244,
+      "sha256": "162907251443d6af3f23683b29ea4f1fb7689570d4667bbdc6d969ee0c689880"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.tex",
+      "bytes": 1190,
+      "sha256": "b2ac03be7e8068631a1553d3120b32370b4298663e10e6b88a856c004418df58"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap_dkvmnfix.pdf",
+      "bytes": 15436,
+      "sha256": "61584996ec197cbd64ec50217bb1e67b10da4a09cc449860ecaa48760c2c7038"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap_dkvmnfix.png",
+      "bytes": 48103,
+      "sha256": "0be5ef3e0710883b0b99a5ca2636d36980d579a07b5f3e9c3be62ba403341327"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 7885,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "DKVMNFIX__assistments_2021__seed0": 21,
+    "DKVMNFIX__ednet_flat__seed1": 2,
+    "DKVMNFIX__ednet_flat__seed0": 2,
+    "DKVMNFIX__ednet_flat__seed2": 2,
+    "DKVMNFIX__assistments_2021__seed1": 21
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ2+RQ3 (DKVMN corrected)",
+  "dataset": "assistments_2021",
+  "seed": 20260204,
+  "source_run": "RQ2RQ3__assistments_2021__seed2",
+  "dkvmn_legacy_lag": false,
+  "dkvmn_hidden": 182,
+  "dkvmn_params": 349805,
+  "dkvmn_lr": 0.001,
+  "dkvmn_val_auc": 0.7407100560216668,
+  "dkvmn_auc_archived": 0.742452515874567,
+  "dkvmn_auc_corrected": 0.742452515874567,
+  "strongest_baseline": "DKT-F"
+}

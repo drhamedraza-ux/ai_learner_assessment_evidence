@@ -1,0 +1,55 @@
+dataset,seed,dimension,convergent,verdict
+assistments_2021,20260202,I_t (identity),0.5843026620355365,retain
+assistments_2021,20260202,C_t (cognition),0.7335329236629272,retain
+assistments_2021,20260202,B_t (behaviour),-0.1063258873046561,reject
+assistments_2021,20260202,M_t (metacognition),0.2244778793256436,reject
+assistments_2021,20260202,G_t (goals),-0.0060169025011334,reject
+assistments_2021,20260202,H_t (historical memory),0.9169460219430046,retain
+assistments_2021,20260203,I_t (identity),0.5794458979258023,retain
+assistments_2021,20260203,C_t (cognition),0.724085082907313,retain
+assistments_2021,20260203,B_t (behaviour),-0.1035254865117324,reject
+assistments_2021,20260203,M_t (metacognition),0.2273057695467376,reject
+assistments_2021,20260203,G_t (goals),-0.0095020012541971,reject
+assistments_2021,20260203,H_t (historical memory),0.915327912590622,retain
+assistments_2021,20260204,I_t (identity),0.5821513390623777,retain
+assistments_2021,20260204,C_t (cognition),0.7258553864162828,retain
+assistments_2021,20260204,B_t (behaviour),-0.1005930432487183,reject
+assistments_2021,20260204,M_t (metacognition),0.2233633484964665,reject
+assistments_2021,20260204,G_t (goals),-0.0081306414641094,reject
+assistments_2021,20260204,H_t (historical memory),0.9121252892590624,retain
+ednet_flat,20260202,I_t (identity),0.625044828200563,retain
+ednet_flat,20260202,C_t (cognition),0.4253137564454133,retain
+ednet_flat,20260202,B_t (behaviour),-0.0139252646912579,reject
+ednet_flat,20260202,M_t (metacognition),0.088976617484934,reject
+ednet_flat,20260202,G_t (goals),0.1388749026599933,reject
+ednet_flat,20260202,H_t (historical memory),0.7657962670948252,retain
+ednet_flat,20260203,I_t (identity),0.6204976412339585,retain
+ednet_flat,20260203,C_t (cognition),0.4261522434481573,retain
+ednet_flat,20260203,B_t (behaviour),-0.0114766567296851,reject
+ednet_flat,20260203,M_t (metacognition),0.0909142525268778,reject
+ednet_flat,20260203,G_t (goals),0.1313687495224545,reject
+ednet_flat,20260203,H_t (historical memory),0.7667550259525964,retain
+ednet_flat,20260204,I_t (identity),0.6274738931117627,retain
+ednet_flat,20260204,C_t (cognition),0.4252479703694236,retain
+ednet_flat,20260204,B_t (behaviour),-0.0136427369519639,reject
+ednet_flat,20260204,M_t (metacognition),0.0913323225037265,reject
+ednet_flat,20260204,G_t (goals),0.1341102930542709,reject
+ednet_flat,20260204,H_t (historical memory),0.7549619180743027,retain
+junyi,20260202,I_t (identity),0.641113423405881,retain
+junyi,20260202,C_t (cognition),0.4861203639440287,retain
+junyi,20260202,B_t (behaviour),-0.1894918208504787,reject
+junyi,20260202,M_t (metacognition),0.189092699780923,reject
+junyi,20260202,G_t (goals),-0.0268503867305321,reject
+junyi,20260202,H_t (historical memory),0.8034964790459198,retain
+junyi,20260203,I_t (identity),0.6323092862676307,retain
+junyi,20260203,C_t (cognition),0.4840425392464169,retain
+junyi,20260203,B_t (behaviour),-0.1850900697384921,reject
+junyi,20260203,M_t (metacognition),0.1860419975768297,reject
+junyi,20260203,G_t (goals),-0.0263163966971107,reject
+junyi,20260203,H_t (historical memory),0.7998975614949579,retain
+junyi,20260204,I_t (identity),0.6244309744444745,retain
+junyi,20260204,C_t (cognition),0.4821869921400546,retain
+junyi,20260204,B_t (behaviour),-0.186628601441816,reject
+junyi,20260204,M_t (metacognition),0.1886577767973181,reject
+junyi,20260204,G_t (goals),-0.0273448160263086,reject
+junyi,20260204,H_t (historical memory),0.7978655935356082,retain

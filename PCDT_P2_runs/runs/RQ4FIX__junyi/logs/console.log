@@ -1,0 +1,39 @@
+==============================================================================
+RUN RQ4FIX__junyi
+RQ4 re-verdict with corrected DKVMN — junyi
+started   2026-08-19 09:49:54   pid 8912
+writes to /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__junyi
+reads     DKVMNFIX__junyi__seed0/table9, DKVMNFIX__junyi__seed1/table9, DKVMNFIX__junyi__seed2/table9
+==============================================================================
+  read input     DKVMNFIX__junyi__seed0/table9
+  read input     DKVMNFIX__junyi__seed1/table9
+  read input     DKVMNFIX__junyi__seed2/table9
+  read input     RQ2RQ3__junyi__seed0/table9
+  read input     RQ2RQ3__junyi__seed1/table9
+  read input     RQ2RQ3__junyi__seed2/table9
+=== ARCHIVED (DKVMN reading one interaction short) ===
+    seed         role comparator  comparator_within_rank  leg1_outside_top3                   gap_leaders  leg2_first_all_gaps  divergence
+20260202  exploratory      DKVMN                       3              False d1:DKVMN; d7:DKVMN; d28:DKVMN                 True       False
+20260203  exploratory      DKVMN                       3              False d1:DKVMN; d7:DKVMN; d28:DKVMN                 True       False
+20260204 confirmatory      DKVMN                       3              False d1:DKVMN; d7:DKVMN; d28:DKVMN                 True       False
+
+=== CORRECTED ===
+    seed         role comparator  comparator_within_rank  leg1_outside_top3                   gap_leaders  leg2_first_all_gaps  divergence
+20260202  exploratory      DKVMN                       3              False d1:DKVMN; d7:DKVMN; d28:DKVMN                 True       False
+20260203  exploratory      DKVMN                       3              False d1:DKVMN; d7:DKVMN; d28:DKVMN                 True       False
+20260204 confirmatory      DKVMN                       3              False d1:DKVMN; d7:DKVMN; d28:DKVMN                 True       False
+
+==============================================================================
+RQ4 on junyi:  archived NOT CONFIRMED (comparator DKVMN)  ->  corrected NOT CONFIRMED (comparator DKVMN)
+==============================================================================
+Verdict and comparator both unchanged: the finding survives the correction.
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__junyi/tables: ['table11_primary_rule_archived', 'table11_primary_rule_corrected']
+
+==============================================================================
+RUN RQ4FIX__junyi — complete
+  runtime        0.0 min
+  files written  6
+  inputs read    6 (0 missing)
+  isolation      OK — no finished run was modified
+  manifest       /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__junyi/manifest.json
+==============================================================================

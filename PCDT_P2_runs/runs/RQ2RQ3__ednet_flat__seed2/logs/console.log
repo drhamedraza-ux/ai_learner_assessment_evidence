@@ -1,0 +1,237 @@
+==============================================================================
+RUN RQ2RQ3__ednet_flat__seed2
+RQ2 + RQ3 — EdNet-KT1, seed 20260204
+started   2026-08-18 10:45:56   pid 11087
+writes to /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed2
+reads     nothing — this notebook is a producer
+concurrent runs detected: RQ2RQ3__ednet_flat__seed0, RQ2RQ3__ednet_flat__seed1
+  (parallel execution is supported and expected — see RUN_ORDER.md)
+==============================================================================
+  data flat      /home/hamed/Downloads/Research/dataset/EdNet/ednet_kt1_flat.csv
+  split        : 50%/10%/40% learner-level, stratified on largest gap
+  capacity     : 350,000 params +/- 5%
+  lr grid      : [0.0005, 0.001, 0.002] (identical for every model)
+  MMDE         : 0.01 AUC
+[ednet_flat] 15,235 learners | 5,071,150 interactions | 12,111 items | 142 skills | correct 0.668 | median span 1.2 d
+        behavioural signals present: ['response_time']
+  OK  15,235 learners | 5,071,150 interactions | 142 KCs
+      correct 0.668 | median span 1.2 d | mean span 69.4 d
+      NOTE short median span; quote the mean and the gap distribution too — a short median with a long mean means a bimodal population, not an unusable dataset.
+
+Temporal profile (referee concern: is the long-gap subpopulation real?)
+
+                         statistic     value
+                             count 15235.000
+                              mean    69.354
+                               std   136.701
+                               min     0.000
+                               25%     0.010
+                               50%     1.209
+                               75%    64.955
+                               90%   249.777
+                               95%   394.035
+                               max   943.663
+ % learners with span >= 1 week(s)    43.190
+% learners with a GAP >= 1 week(s)    37.276
+ % learners with span >= 2 week(s)    38.884
+% learners with a GAP >= 2 week(s)    30.903
+ % learners with span >= 4 week(s)    33.259
+% learners with a GAP >= 4 week(s)    24.234
+ % learners with span >= 8 week(s)    26.452
+% learners with a GAP >= 8 week(s)    18.267
+  train 7,617 learners | 623,659 interactions
+  val   1,522 learners | 121,121 interactions
+  test  6,096 learners | 504,841 interactions
+
+skill vocabulary (train-derived): 143
+
+REAL prediction points per horizon in the enlarged test split:
+
+horizon  points  learners  adequate
+ within  470863      6096      True
+sameday   15247      2706      True
+     d1    8762      2410      True
+     d7    2299      1357      True
+    d28    1574      1098     False
+
+Adequacy floor: >= 2,000 points AND >= 300 learners.
+A horizon below the floor is reported INADEQUATE and is NOT replaced by a simulated value.
+device: cuda
+models: ['DKT', 'SAKT', 'AKT', 'DKVMN', 'DKT-F', 'PCDT', 'PCDT-noPsi', 'Control']
+Temporal alignment gate — target j must use interactions 0..j-1
+
+  DKT          ok      highest position used per target: 1:0, 2:1, 3:2, 4:3, 5:4, 6:5 ...
+  SAKT         ok      highest position used per target: 1:0, 2:1, 3:2, 4:3, 5:4, 6:5 ...
+  AKT          ok      highest position used per target: 1:0, 2:1, 3:2, 4:3, 5:4, 6:5 ...
+  DKVMN        ok      highest position used per target: 1:0, 2:1, 3:2, 4:3, 5:4, 6:5 ...
+  DKT-F        ok      highest position used per target: 1:0, 2:1, 3:2, 4:3, 5:4, 6:5 ...
+  PCDT         ok      highest position used per target: 1:0, 2:1, 3:2, 4:3, 5:4, 6:5 ...
+  PCDT-noPsi   ok      highest position used per target: 1:0, 2:1, 3:2, 4:3, 5:4, 6:5 ...
+  Control      ok      highest position used per target: 1:0, 2:1, 3:2, 4:3, 5:4, 6:5 ...
+
+GATE PASSED — all eight models see identical history.
+
+DKVMN memory ordering: canonical
+  DKT          hidden= 184 params= 351,583 lr=0.0005  val AUC=0.7078 
+  SAKT         hidden= 172 params= 347,097 lr=0.0005  val AUC=0.7042 
+  AKT          hidden= 237 params= 351,142 lr=0.0005  val AUC=0.6827 
+  DKVMN        hidden= 240 params= 349,921 lr=0.001   val AUC=0.7090 
+  DKT-F        hidden= 183 params= 349,673 lr=0.0005  val AUC=0.7080 
+  PCDT         hidden= 159 params= 348,371 lr=0.0005  val AUC=0.7096 
+  PCDT-noPsi   hidden= 159 params= 348,371 lr=0.0005  val AUC=0.7111 
+  Control      hidden= 159 params= 348,371 lr=0.0005  val AUC=0.7013 
+
+total training time: 46.8 min
+saved predictions_test.npz + model_*.pt
+Table 2. Next-interaction predictive performance, capacity-matched.
+
+     model  params  hidden     lr  capacity_matched      n    auc    acc   rmse    nll    ece  brier
+       DKT  351583     184 0.0005              True 498745 0.7091 0.6829 0.4552 0.6026 0.0090 0.2072
+      SAKT  347097     172 0.0005              True 498745 0.7048 0.6819 0.4564 0.6050 0.0114 0.2083
+       AKT  351142     237 0.0005              True 498745 0.6865 0.6738 0.4612 0.6151 0.0070 0.2127
+     DKVMN  349921     240 0.0010              True 498745 0.7109 0.6840 0.4548 0.6017 0.0070 0.2068
+     DKT-F  349673     183 0.0005              True 498745 0.7091 0.6833 0.4551 0.6023 0.0052 0.2071
+      PCDT  348371     159 0.0005              True 498745 0.7111 0.6847 0.4541 0.6002 0.0040 0.2062
+PCDT-noPsi  348371     159 0.0005              True 498745 0.7126 0.6849 0.4538 0.5995 0.0041 0.2059
+   Control  348371     159 0.0005              True 498745 0.7032 0.6812 0.4561 0.6043 0.0066 0.2081
+
+Strongest tuned baseline on ednet_flat: DKVMN (AUC 0.7109)
+PCDT - DKVMN = +0.0002 AUC
+H1 NOT SUPPORTED at the pre-registered MMDE of 0.01
+Paired bootstrap over test LEARNERS (2,000 resamples, Holm-corrected).
+
+       comparison  delta_auc   ci_lo   ci_hi     p  meaningful  p_holm                             verdict
+       PCDT - DKT     0.0020  0.0013  0.0026 0.000       False   0.000 significant but < 0.01 (negligible)
+      PCDT - SAKT     0.0063  0.0055  0.0071 0.000       False   0.000 significant but < 0.01 (negligible)
+       PCDT - AKT     0.0246  0.0231  0.0262 0.000        True   0.000          significant AND meaningful
+     PCDT - DKVMN     0.0002 -0.0006  0.0010 0.592       False   0.592                     not significant
+     PCDT - DKT-F     0.0020  0.0014  0.0026 0.000       False   0.000 significant but < 0.01 (negligible)
+PCDT - PCDT-noPsi    -0.0015 -0.0019 -0.0011 0.000       False   0.000 significant but < 0.01 (negligible)
+   PCDT - Control     0.0079  0.0072  0.0087 0.000       False   0.000 significant but < 0.01 (negligible)
+
+Large n makes trivial differences significant. A difference is credited only if it is both Holm-significant and at least the pre-registered MMDE.
+comparators: ['Control', 'DKT-F', 'DKVMN']
+
+Table 5. Retention advantage (difference-in-differences in AUC, 95% CI).
+
+ adequate  n_learners  n_points  retention_advantage   ci_lo   ci_hi  auc_pcdt  auc_comparator horizon comparator     source
+     True        2410      8762               0.0022 -0.0025  0.0068    0.6291          0.6192      d1    Control       real
+     True        1357      2299              -0.0028 -0.0107  0.0052    0.6236          0.6188      d7    Control       real
+    False        1098      1574                    -       -       -         -               -     d28    Control INADEQUATE
+     True        2410      8762              -0.0022 -0.0075  0.0031    0.6291          0.6291      d1      DKT-F       real
+     True        1357      2299              -0.0043 -0.0137  0.0047    0.6236          0.6257      d7      DKT-F       real
+    False        1098      1574                    -       -       -         -               -     d28      DKT-F INADEQUATE
+     True        2410      8762              -0.0122 -0.0181 -0.0062    0.6291          0.6406      d1      DKVMN       real
+     True        1357      2299              -0.0121 -0.0238 -0.0006    0.6236          0.6350      d7      DKVMN       real
+    False        1098      1574                    -       -       -         -               -     d28      DKVMN INADEQUATE
+
+Any horizon marked INADEQUATE is NOT a result and must not be replaced by a simulated value in the manuscript without an explicit (sim) tag.
+Table 6. Educational utility: review targeting vs each comparator.
+
+horizon comparator  threshold  extra_correctly_flagged  extra_false_alarms  fewer_missed  d_precision  d_recall    d_f1  strict_win
+ within    Control        0.3                     1228                 465          1228      -0.0023    0.0064  0.0078       False
+ within    Control        0.4                     2128                1165          2128      -0.0043    0.0111  0.0105       False
+ within    Control        0.5                     5266                3663          5266      -0.0084    0.0276  0.0199       False
+ within    Control        0.6                     6988                6219          6988      -0.0048    0.0366  0.0168       False
+ within    Control        0.7                     3379                3596          3379      -0.0002    0.0177  0.0049       False
+sameday    Control        0.3                       21                   2            21       0.0164    0.0039  0.0073       False
+sameday    Control        0.4                       68                  42            68      -0.0165    0.0127  0.0212       False
+sameday    Control        0.5                      179                 101           179       0.0126    0.0334  0.0442       False
+sameday    Control        0.6                      235                 117           235       0.0160    0.0438  0.0338       False
+sameday    Control        0.7                       44                 -45            44       0.0046    0.0082  0.0059        True
+     d1    Control        0.3                       17                   6            17      -0.0243    0.0053  0.0098       False
+     d1    Control        0.4                       67                  20            67       0.0096    0.0208  0.0358       False
+     d1    Control        0.5                      114                  59           114       0.0086    0.0354  0.0475       False
+     d1    Control        0.6                      164                 123           164       0.0084    0.0509  0.0365       False
+     d1    Control        0.7                       68                  79            68       0.0011    0.0211  0.0065       False
+     d7    Control        0.3                        7                   3             7      -0.0036    0.0079  0.0134       False
+     d7    Control        0.4                       11                   9            11      -0.0250    0.0125  0.0181       False
+     d7    Control        0.5                       25                  36            25      -0.0417    0.0283  0.0276       False
+     d7    Control        0.6                       35                  33            35       0.0018    0.0397  0.0246       False
+     d7    Control        0.7                       -2                  33            -2      -0.0101   -0.0023 -0.0087       False
+ within      DKT-F        0.3                     1121                 -89          1121       0.0058    0.0059  0.0078        True
+ within      DKT-F        0.4                    -1540               -1819         -1540       0.0116   -0.0081 -0.0058       False
+ within      DKT-F        0.5                    -3472               -4168         -3472       0.0146   -0.0182 -0.0095       False
+ within      DKT-F        0.6                    -2312               -4435         -2312       0.0086   -0.0121 -0.0016       False
+ within      DKT-F        0.7                     2702                5533          2702      -0.0044    0.0141  0.0007       False
+sameday      DKT-F        0.3                       32                   2            32       0.0311    0.0060  0.0112       False
+sameday      DKT-F        0.4                       31                  -1            31       0.0211    0.0058  0.0099        True
+sameday      DKT-F        0.5                      -73                 -79           -73       0.0102   -0.0136 -0.0155       False
+sameday      DKT-F        0.6                     -161                -295          -161       0.0126   -0.0300 -0.0122       False
+sameday      DKT-F        0.7                     -149                -256          -149       0.0015   -0.0278 -0.0056       False
+     d1      DKT-F        0.3                       21                   3            21       0.0083    0.0065  0.0122       False
+     d1      DKT-F        0.4                       33                  14            33      -0.0083    0.0102  0.0173       False
+     d1      DKT-F        0.5                      -43                 -36           -43       0.0073   -0.0133 -0.0160       False
+     d1      DKT-F        0.6                     -141                -177          -141       0.0069   -0.0437 -0.0230       False
+     d1      DKT-F        0.7                      -82                -228           -82       0.0080   -0.0254  0.0003       False
+     d7      DKT-F        0.3                       15                   7            15      -0.0164    0.0170  0.0291       False
+     d7      DKT-F        0.4                        9                  -3             9       0.0358    0.0102  0.0166        True
+     d7      DKT-F        0.5                      -13                  -6           -13      -0.0058   -0.0147 -0.0166       False
+     d7      DKT-F        0.6                      -49                 -43           -49      -0.0039   -0.0556 -0.0321       False
+     d7      DKT-F        0.7                      -29                 -52           -29       0.0036   -0.0329 -0.0054       False
+ within      DKVMN        0.3                     -416                -857          -416       0.0111   -0.0022 -0.0016       False
+ within      DKVMN        0.4                    -3885               -3441         -3885       0.0181   -0.0203 -0.0163       False
+ within      DKVMN        0.5                    -4959               -5474         -4959       0.0178   -0.0260 -0.0143       False
+ within      DKVMN        0.6                    -1751               -2752         -1751       0.0047   -0.0092 -0.0022       False
+ within      DKVMN        0.7                     3237                8318          3237      -0.0080    0.0169 -0.0013       False
+sameday      DKVMN        0.3                      -49                 -31           -49       0.0454   -0.0091 -0.0165       False
+sameday      DKVMN        0.4                     -118                -102          -118       0.0425   -0.0220 -0.0342       False
+sameday      DKVMN        0.5                     -231                -158          -231      -0.0015   -0.0430 -0.0507       False
+sameday      DKVMN        0.6                      -33                 -11           -33      -0.0026   -0.0061 -0.0048       False
+sameday      DKVMN        0.7                      167                 623           167      -0.0172    0.0311 -0.0055       False
+     d1      DKVMN        0.3                      -27                 -15           -27       0.0515   -0.0084 -0.0152       False
+     d1      DKVMN        0.4                      -80                 -52           -80       0.0430   -0.0248 -0.0392       False
+     d1      DKVMN        0.5                     -153                 -96          -153       0.0029   -0.0475 -0.0565       False
+     d1      DKVMN        0.6                      -37                  27           -37      -0.0125   -0.0115 -0.0120       False
+     d1      DKVMN        0.7                       64                 261            64      -0.0135    0.0199 -0.0054       False
+     d7      DKVMN        0.3                      -13                   1           -13      -0.0467   -0.0147 -0.0252       False
+     d7      DKVMN        0.4                      -22                 -18           -22       0.0333   -0.0249 -0.0342       False
+     d7      DKVMN        0.5                      -39                  -8           -39      -0.0322   -0.0442 -0.0512       False
+     d7      DKVMN        0.6                      -33                  22           -33      -0.0357   -0.0374 -0.0368       False
+     d7      DKVMN        0.7                       43                  89            43      -0.0098    0.0488  0.0058       False
+
+STRICT WINS (more correctly flagged AND no more false alarms):
+  vs Control    1/20 operating points
+  vs DKT-F      3/20 operating points
+  vs DKVMN      0/20 operating points
+
+Wording the evidence supports: if strict wins are common against Control but rare against the strongest baseline, the claim is 'time-aware modelling improves review targeting over a session-resetting baseline' — NOT 'over the state of the art'.
+Table 7. Ablation of the persistence mechanism (within session).
+
+removed_or_compared  auc_variant  auc_pcdt  delta_auc   ci_lo   ci_hi     p  meaningful  p_holm
+         PCDT-noPsi       0.7126    0.7111    -0.0015 -0.0019 -0.0011 0.000       False   0.000
+            Control       0.7032    0.7111     0.0079  0.0072  0.0087 0.000       False   0.000
+              DKVMN       0.7109    0.7111     0.0002 -0.0006  0.0010 0.592       False   0.592
+
+Within-session contribution of Psi (PCDT - PCDT-noPsi): -0.0015 AUC
+A near-zero or negative value means the operator contributes nothing within session; whether it earns its place must then be decided on the post-gap evidence below.
+Table 9. Within-session and post-gap AUC by model.
+
+     model  auc_within  auc_d1  auc_d7  auc_d28  auc_mean_postgap  rank_within  rank_mean_postgap
+PCDT-noPsi      0.7164  0.6330  0.6283      n/a            0.6307          1.0                2.0
+      PCDT      0.7151  0.6291  0.6236      n/a            0.6264          2.0                6.0
+     DKVMN      0.7144  0.6406  0.6350      n/a            0.6378          3.0                1.0
+       DKT      0.7130  0.6252  0.6327      n/a            0.6290          4.0                4.0
+     DKT-F      0.7128  0.6291  0.6257      n/a            0.6274          5.0                5.0
+      SAKT      0.7084  0.6324  0.6289      n/a            0.6306          6.0                3.0
+   Control      0.7074  0.6192  0.6188      n/a            0.6190          7.0                7.0
+       AKT      0.6908  0.6001  0.5970      n/a            0.5985          8.0                8.0
+
+Top within session : PCDT-noPsi
+Top across gaps    : DKVMN
+Models moving >= 2 rank positions between the two protocols: ['PCDT', 'DKVMN', 'SAKT']
+
+This notebook REPORTS the divergence. It is CONFIRMED, against a rule pre-registered before the run, only in Notebook 3.
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed2/tables: ['table0_temporal_profile', 'table1_bucket_counts', 'table2_predictive', 'table3_statistics', 'table5_persistence', 'table6_educational_utility', 'table7_ablation_persistence', 'table9_postgap_auc_by_model']
+Models below the diagonal degrade across gaps. Ranking divergence needs no exotic mechanism — only that models degrade at DIFFERENT rates.
+
+==============================================================================
+RUN RQ2RQ3__ednet_flat__seed2 — complete
+  runtime        104.16 min
+  files written  32
+  inputs read    0 (0 missing)
+  concurrent     RQ2RQ3__ednet_flat__seed0 (34 files), RQ2RQ3__ednet_flat__seed1 (34 files)
+                 ran alongside this one and wrote only into its own folder — expected, not a problem
+  isolation      OK — no finished run was modified
+  manifest       /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed2/manifest.json
+==============================================================================

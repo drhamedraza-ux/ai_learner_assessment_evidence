@@ -1,0 +1,267 @@
+{
+  "run_id": "RQ2RQ3__junyi__seed0",
+  "description": "RQ2 + RQ3 \u2014 Junyi Academy, seed 20260202",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 13:15:36",
+  "finished": "2026-08-18 16:29:53",
+  "runtime_minutes": 194.28,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed0",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": {
+    "dataset": "junyi",
+    "root": "/home/hamed/Downloads/Research/dataset",
+    "out_root": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs",
+    "max_learners": 20000,
+    "min_seq_len": 10,
+    "max_seq_len": 200,
+    "train_frac": 0.5,
+    "val_frac": 0.1,
+    "test_frac": 0.4,
+    "split_mode": "learner",
+    "param_budget": 350000,
+    "param_tolerance": 0.05,
+    "batch_size": 64,
+    "weight_decay": 1e-05,
+    "max_epochs": 30,
+    "patience": 5,
+    "grad_clip": 5.0,
+    "search_lrs": [
+      0.0005,
+      0.001,
+      0.002
+    ],
+    "use_persistence": true,
+    "dkvmn_legacy_lag": false,
+    "tau0_seconds": 3600.0,
+    "session_gap_s": 1200,
+    "reliability_floor": 0.6,
+    "convergent_floor": 0.3,
+    "simulator_recovery_floor": 0.5,
+    "min_meaningful_auc_delta": 0.01,
+    "warm_min_history": 5,
+    "min_learners_bucket": 300,
+    "min_points_bucket": 2000,
+    "utility_thresholds": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "n_bootstrap": 2000,
+    "ece_bins": 15,
+    "seeds": [
+      20260202,
+      20260203,
+      20260204
+    ],
+    "seed_index": 0,
+    "allow_fixture": false
+  },
+  "inputs": [],
+  "missing_inputs": [],
+  "n_outputs": 32,
+  "outputs": [
+    {
+      "path": "artifacts/model_AKT.pt",
+      "bytes": 1410142,
+      "sha256": "c137e19d7f6317c3697bba714fc90877b5d7b72a4126d6d94cc26142d5b0d45e"
+    },
+    {
+      "path": "artifacts/model_Control.pt",
+      "bytes": 1405614,
+      "sha256": "ed29433a5c1203c165ec58679acebfce69c2f67a42b6883f36f25a1a782a5f52"
+    },
+    {
+      "path": "artifacts/model_DKT-F.pt",
+      "bytes": 1408325,
+      "sha256": "ed87ab41999644851b58c48b02c4f080aeb059b8962ee6c1f425aa9531a0b88e"
+    },
+    {
+      "path": "artifacts/model_DKT.pt",
+      "bytes": 1405809,
+      "sha256": "e3a78a3667f33ef08192dd758fd232d3b3fb37ed4a53a462334bc1484110b8d4"
+    },
+    {
+      "path": "artifacts/model_DKVMN.pt",
+      "bytes": 1403271,
+      "sha256": "147795f1b5bc48c80789990e71ac3937fbc9b8e1c6d7ca919d48d49d0646cb7d"
+    },
+    {
+      "path": "artifacts/model_PCDT-noPsi.pt",
+      "bytes": 1405671,
+      "sha256": "c6bd3a5aa8ece1144f2af77ea72b8fdada101d21c28c8ff7dbaaf50869f793d2"
+    },
+    {
+      "path": "artifacts/model_PCDT.pt",
+      "bytes": 1405557,
+      "sha256": "cc226c6a0e403b264d65ffc37a360dd7c3e65f42e48ce1a0cb0f50c9fe3ef458"
+    },
+    {
+      "path": "artifacts/model_SAKT.pt",
+      "bytes": 1379829,
+      "sha256": "8222d0ba5d5a4e0a974ba4fd2b6b2a6eca70372d64e02a00e0915878bbe48edc"
+    },
+    {
+      "path": "artifacts/predictions_test.npz",
+      "bytes": 36858898,
+      "sha256": "47385441da58f910f6a3dcd63fd4d528daba27e3a507310f38bbba54b0581001"
+    },
+    {
+      "path": "tables/table0_temporal_profile.csv",
+      "bytes": 616,
+      "sha256": "ac7df8d27bc89f39b14da0e28ee6e438a86fae7051f40cd15430ab852f7a8fca"
+    },
+    {
+      "path": "tables/table0_temporal_profile.tex",
+      "bytes": 656,
+      "sha256": "a1dd877a1ea3a2fd1769d0ba8cca69c3ac6a6507203bff2632f65fba1d2890c6"
+    },
+    {
+      "path": "tables/table1_bucket_counts.csv",
+      "bytes": 137,
+      "sha256": "f0fc23903273c9fde1337084d9b29774e891205c71a4fcc391b187635468acce"
+    },
+    {
+      "path": "tables/table1_bucket_counts.tex",
+      "bytes": 257,
+      "sha256": "674cd00967f82d6613dbf363141591b627c7c21b44a4455c5a825bdf668102cc"
+    },
+    {
+      "path": "tables/table2_predictive.csv",
+      "bytes": 1278,
+      "sha256": "cd4016362897dbbd54220a00dd5b133923e6ffa2840c4ec762e3fb273d6a5936"
+    },
+    {
+      "path": "tables/table2_predictive.tex",
+      "bytes": 987,
+      "sha256": "4f58460fbb4d83a9b4f08740c292c2021b36943b2dbc5650958c3747d33ef32e"
+    },
+    {
+      "path": "tables/table3_statistics.csv",
+      "bytes": 901,
+      "sha256": "f7a2f6f89d11fe9bb050548742ed9482983ad741bd923ac720e18e4353d6299b"
+    },
+    {
+      "path": "tables/table3_statistics.tex",
+      "bytes": 854,
+      "sha256": "9a1dcca962c5b65c3dd7c2eb58db77240a0f8264209ff9055c801e3176deaf1a"
+    },
+    {
+      "path": "tables/table5_persistence.csv",
+      "bytes": 1305,
+      "sha256": "4d9003b6aa06edd7e2a209741b6561203469bdbf8cf3c0ac338469dccb7a2e96"
+    },
+    {
+      "path": "tables/table5_persistence.tex",
+      "bytes": 1021,
+      "sha256": "38597951d7410c7cd6b01f66d90d2094e1a3c629b05a6e2a7d7ba7ed1d605a7c"
+    },
+    {
+      "path": "tables/table6_educational_utility.csv",
+      "bytes": 7342,
+      "sha256": "64f22cc577edbc85d9d877f42ed72a2294ec90428701a00510ba0114d54ca42f"
+    },
+    {
+      "path": "tables/table6_educational_utility.tex",
+      "bytes": 6182,
+      "sha256": "4d6e8651735b1f3ba17131035287efb258b15f2a119e3f8b777cfdd0e73f38a3"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.csv",
+      "bytes": 465,
+      "sha256": "16aa64e5a0bd4cfcb1518392c2269380c1e31cbff12715e6a7281235464e4d8e"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.tex",
+      "bytes": 429,
+      "sha256": "1d56fb5be90ce867a3bbe394745a1b50c2439b90a6fcffad36023b5d9961f997"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.csv",
+      "bytes": 1379,
+      "sha256": "45883d738668d87741fa0bf77e54c32bc353332a24bb2cbfafb664adc7bc94e5"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.tex",
+      "bytes": 1214,
+      "sha256": "d2e8eb42034ad629b8f25fecebbccd7d03ae81668e1b4aa3ea512f15b0a2e0af"
+    },
+    {
+      "path": "figures/fig_retention.pdf",
+      "bytes": 19730,
+      "sha256": "d58da72ccf17f8d25427bab386c950f0d10923a0f82d251e2718ccd9814738db"
+    },
+    {
+      "path": "figures/fig_retention.png",
+      "bytes": 115337,
+      "sha256": "71e9fc1358c6f70c5f92daab43d8151094f4a5902369f8d1769a51e89e6dc554"
+    },
+    {
+      "path": "figures/fig_roc_all_models.pdf",
+      "bytes": 129950,
+      "sha256": "e49dba36a61e9d4a7a917200c9c227dd16284738d95a1a717d04496e8333d2c4"
+    },
+    {
+      "path": "figures/fig_roc_all_models.png",
+      "bytes": 169804,
+      "sha256": "284afb5d0f33a61e76472129ca770e675fb285c1bcc717739ecabb86eed23498"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap.pdf",
+      "bytes": 17389,
+      "sha256": "c8e002b818a98b0f145268292f569dc2f0a39a8faa7d8543541a40fe1b8ac597"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap.png",
+      "bytes": 102447,
+      "sha256": "580ad7d10ea416cbec7b80384e97e7a4e927ff3a4b21c3d8552e6b307045dcf4"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 20855,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "RQ2RQ3__junyi__seed1": 34,
+    "RQ2RQ3__junyi__seed2": 11,
+    "RQ4__ednet_flat": 12,
+    "RQ4__assistments_2021": 12
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ2+RQ3",
+  "dataset": "junyi",
+  "seed": 20260202,
+  "seed_index": 0,
+  "n_learners": 16921,
+  "strongest_baseline": "DKVMN",
+  "horizons_real": [
+    "d1",
+    "d7",
+    "d28"
+  ],
+  "data_paths": {
+    "log": "/home/hamed/Downloads/Research/dataset/junyi/Log_Problem.csv",
+    "content": "/home/hamed/Downloads/Research/dataset/junyi/Info_Content.csv"
+  }
+}

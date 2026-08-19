@@ -1,0 +1,230 @@
+{
+  "run_id": "RQ4__junyi",
+  "description": "RQ4 ranking divergence \u2014 Junyi Academy, 3 seeds",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 16:34:30",
+  "finished": "2026-08-18 16:50:25",
+  "runtime_minutes": 15.92,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4__junyi",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": {
+    "dataset": "junyi",
+    "root": "/home/hamed/Downloads/Research/dataset",
+    "out_root": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs",
+    "max_learners": 20000,
+    "min_seq_len": 10,
+    "max_seq_len": 200,
+    "train_frac": 0.5,
+    "val_frac": 0.1,
+    "test_frac": 0.4,
+    "split_mode": "learner",
+    "param_budget": 350000,
+    "param_tolerance": 0.05,
+    "batch_size": 64,
+    "weight_decay": 1e-05,
+    "max_epochs": 30,
+    "patience": 5,
+    "grad_clip": 5.0,
+    "search_lrs": [
+      0.0005,
+      0.001,
+      0.002
+    ],
+    "use_persistence": true,
+    "dkvmn_legacy_lag": false,
+    "tau0_seconds": 3600.0,
+    "session_gap_s": 1200,
+    "reliability_floor": 0.6,
+    "convergent_floor": 0.3,
+    "simulator_recovery_floor": 0.5,
+    "min_meaningful_auc_delta": 0.01,
+    "warm_min_history": 5,
+    "min_learners_bucket": 300,
+    "min_points_bucket": 2000,
+    "utility_thresholds": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "n_bootstrap": 2000,
+    "ece_bins": 15,
+    "seeds": [
+      20260202,
+      20260203,
+      20260204
+    ],
+    "seed_index": 0,
+    "allow_fixture": false
+  },
+  "inputs": [
+    {
+      "label": "RQ2RQ3__junyi__seed0/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed0/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "45883d738668d87741fa0bf77e54c32bc353332a24bb2cbfafb664adc7bc94e5",
+      "bytes": 1379,
+      "mtime": "2026-08-18 16:29:50"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed0/predictions",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed0/artifacts/predictions_test.npz",
+      "present": true,
+      "sha256": "47385441da58f910f6a3dcd63fd4d528daba27e3a507310f38bbba54b0581001",
+      "bytes": 36858898,
+      "mtime": "2026-08-18 14:56:23"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed1/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed1/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "299f059fce7806c0c5ef4916a3e729d11f983b7dc4ba1c7392f9fce31e687c2c",
+      "bytes": 1384,
+      "mtime": "2026-08-18 16:29:34"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed1/predictions",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed1/artifacts/predictions_test.npz",
+      "present": true,
+      "sha256": "5580c87c1b56c66b40a82d35fe3b33426e7fc0d6052465ed42f57df471b57477",
+      "bytes": 37103117,
+      "mtime": "2026-08-18 14:55:43"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed2/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed2/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "4f155ec163549c6908a703c37b85f19cca8dac5479615d510bcbda3237d84acb",
+      "bytes": 1385,
+      "mtime": "2026-08-18 16:33:20"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed2/predictions",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed2/artifacts/predictions_test.npz",
+      "present": true,
+      "sha256": "cca37ffc303ac983ce78b93c65112eb4e141907abdf2b587643d42cdda4f6f72",
+      "bytes": 37126341,
+      "mtime": "2026-08-18 15:03:32"
+    }
+  ],
+  "missing_inputs": [],
+  "n_outputs": 10,
+  "outputs": [
+    {
+      "path": "artifacts/verdict_rq4.json",
+      "bytes": 1957,
+      "sha256": "332fc096759bfffc239a05c1534aa5cc3d608db96308855ead01e05fec4c419b"
+    },
+    {
+      "path": "tables/table10_rankings_by_seed.csv",
+      "bytes": 1680,
+      "sha256": "3d328c1fc1ef4ddf4b0e9abca1a6f3a6838cfd42ae149beacd6f09a0e570329d"
+    },
+    {
+      "path": "tables/table10_rankings_by_seed.tex",
+      "bytes": 1705,
+      "sha256": "18bd81c1337857dbab88a98ae8577a2d6c0f528f939c5aab664cd5bb13d27fc9"
+    },
+    {
+      "path": "tables/table11_primary_rule_by_seed.csv",
+      "bytes": 331,
+      "sha256": "ea4a4443baff9960fd6ec3827136741f411f0f0e48970f5038e8e242c6623f6c"
+    },
+    {
+      "path": "tables/table11_primary_rule_by_seed.tex",
+      "bytes": 487,
+      "sha256": "aae1f9eb949c16ac0ff4f372497682b50c3fec81b47e719d990cd12fcbbea23a"
+    },
+    {
+      "path": "tables/table12_secondary_magnitude.csv",
+      "bytes": 1428,
+      "sha256": "7c240c5070a99d35dd41e9718f093817b2549d8a0c6d7684f8adc9c12cec6c17"
+    },
+    {
+      "path": "tables/table12_secondary_magnitude.tex",
+      "bytes": 1284,
+      "sha256": "8e009fff0891fc2189cce9e4de095ab684fa8bc8e4060ba2fe0752e939fa2da3"
+    },
+    {
+      "path": "tables/table13_selection_sensitivity.csv",
+      "bytes": 148,
+      "sha256": "8bdd140ccbfb66339376f3687836bf6082e324c8293a2c81775f6795926c487f"
+    },
+    {
+      "path": "tables/table13_selection_sensitivity.tex",
+      "bytes": 255,
+      "sha256": "b8f680c5924dad4385ca8b40cc2f030b4d001fcad51995361cf554f38333f7b8"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 7276,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {},
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ4",
+  "dataset": "junyi",
+  "seed_roles": {
+    "s1": "exploratory",
+    "s2": "exploratory",
+    "s3": "CONFIRMATORY"
+  },
+  "verdict": {
+    "primary_confirmed": false,
+    "adequate_horizons": [
+      "d1",
+      "d7",
+      "d28"
+    ],
+    "comparator": "DKVMN",
+    "failing_leg": "leg1: comparator ranks inside the top 3 within session",
+    "selection_sensitivity": {
+      "comparator_from_exploratory": "DKVMN",
+      "comparator_from_confirmatory": "DKVMN",
+      "same_comparator": true,
+      "within_rank_on_s3": 3,
+      "leg1": false,
+      "leg2": true,
+      "divergence": false
+    },
+    "secondary_confirmed": true,
+    "sign_flip_by_seed": {
+      "s1": {
+        "within_positive_sig": true,
+        "any_gap_negative_sig": true,
+        "sign_flip": true
+      },
+      "s2": {
+        "within_positive_sig": true,
+        "any_gap_negative_sig": true,
+        "sign_flip": true
+      },
+      "s3": {
+        "within_positive_sig": true,
+        "any_gap_negative_sig": true,
+        "sign_flip": true
+      }
+    }
+  }
+}

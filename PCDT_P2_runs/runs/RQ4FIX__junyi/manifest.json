@@ -1,0 +1,136 @@
+{
+  "run_id": "RQ4FIX__junyi",
+  "description": "RQ4 re-verdict with corrected DKVMN \u2014 junyi",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-19 09:49:54",
+  "finished": "2026-08-19 09:49:55",
+  "runtime_minutes": 0.0,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__junyi",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": null,
+  "inputs": [
+    {
+      "label": "DKVMNFIX__junyi__seed0/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__junyi__seed0/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "45883d738668d87741fa0bf77e54c32bc353332a24bb2cbfafb664adc7bc94e5",
+      "bytes": 1379,
+      "mtime": "2026-08-18 20:25:54"
+    },
+    {
+      "label": "DKVMNFIX__junyi__seed1/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__junyi__seed1/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "299f059fce7806c0c5ef4916a3e729d11f983b7dc4ba1c7392f9fce31e687c2c",
+      "bytes": 1384,
+      "mtime": "2026-08-18 20:28:34"
+    },
+    {
+      "label": "DKVMNFIX__junyi__seed2/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__junyi__seed2/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "4f155ec163549c6908a703c37b85f19cca8dac5479615d510bcbda3237d84acb",
+      "bytes": 1385,
+      "mtime": "2026-08-18 20:26:00"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed0/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed0/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "45883d738668d87741fa0bf77e54c32bc353332a24bb2cbfafb664adc7bc94e5",
+      "bytes": 1379,
+      "mtime": "2026-08-18 16:29:50"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed1/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed1/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "299f059fce7806c0c5ef4916a3e729d11f983b7dc4ba1c7392f9fce31e687c2c",
+      "bytes": 1384,
+      "mtime": "2026-08-18 16:29:34"
+    },
+    {
+      "label": "RQ2RQ3__junyi__seed2/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__junyi__seed2/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "4f155ec163549c6908a703c37b85f19cca8dac5479615d510bcbda3237d84acb",
+      "bytes": 1385,
+      "mtime": "2026-08-18 16:33:20"
+    }
+  ],
+  "missing_inputs": [],
+  "n_outputs": 6,
+  "outputs": [
+    {
+      "path": "artifacts/verdict_rq4_corrected.json",
+      "bytes": 436,
+      "sha256": "d728bf26b7a7738fcdd961e0534b3746e649869243ab6bf815c683d5ec831727"
+    },
+    {
+      "path": "tables/table11_primary_rule_archived.csv",
+      "bytes": 334,
+      "sha256": "94f2d0b296fb232012eb4b6980747dd4a870bcdf55fda87a5af4561f600d6046"
+    },
+    {
+      "path": "tables/table11_primary_rule_archived.tex",
+      "bytes": 480,
+      "sha256": "93fe954c581a70d2134ddaa40adf0b4d0608e4b28c22661e007a053ed2175470"
+    },
+    {
+      "path": "tables/table11_primary_rule_corrected.csv",
+      "bytes": 334,
+      "sha256": "94f2d0b296fb232012eb4b6980747dd4a870bcdf55fda87a5af4561f600d6046"
+    },
+    {
+      "path": "tables/table11_primary_rule_corrected.tex",
+      "bytes": 480,
+      "sha256": "93fe954c581a70d2134ddaa40adf0b4d0608e4b28c22661e007a053ed2175470"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 2397,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {},
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ4 (corrected DKVMN)",
+  "dataset": "junyi",
+  "verdict": {
+    "dataset": "junyi",
+    "rule": "UNCHANGED from the pre-registration: comparator ranks outside the top 3 within session AND first at every adequate real gap horizon, on the confirmatory seed",
+    "archived": {
+      "comparator": "DKVMN",
+      "confirmed": false
+    },
+    "corrected": {
+      "comparator": "DKVMN",
+      "confirmed": false,
+      "adequate_horizons": [
+        "d1",
+        "d7",
+        "d28"
+      ]
+    },
+    "verdict_changed": false
+  }
+}

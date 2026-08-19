@@ -1,0 +1,173 @@
+{
+  "run_id": "RQ1__assistments_2021__seed2",
+  "description": "RQ1 construct-validity audit \u2014 ASSISTments 2020-21, seed 20260204",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-17 20:00:59",
+  "finished": "2026-08-17 20:01:30",
+  "runtime_minutes": 0.52,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__assistments_2021__seed2",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": {
+    "dataset": "assistments_2021",
+    "root": "/home/hamed/Downloads/Research/dataset",
+    "out_root": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs",
+    "max_learners": 20000,
+    "min_seq_len": 10,
+    "max_seq_len": 200,
+    "train_frac": 0.5,
+    "val_frac": 0.1,
+    "test_frac": 0.4,
+    "split_mode": "learner",
+    "param_budget": 350000,
+    "param_tolerance": 0.05,
+    "batch_size": 64,
+    "weight_decay": 1e-05,
+    "max_epochs": 30,
+    "patience": 5,
+    "grad_clip": 5.0,
+    "search_lrs": [
+      0.0005,
+      0.001,
+      0.002
+    ],
+    "use_persistence": true,
+    "dkvmn_legacy_lag": false,
+    "tau0_seconds": 3600.0,
+    "session_gap_s": 1200,
+    "reliability_floor": 0.6,
+    "convergent_floor": 0.3,
+    "simulator_recovery_floor": 0.5,
+    "min_meaningful_auc_delta": 0.01,
+    "warm_min_history": 5,
+    "min_learners_bucket": 300,
+    "min_points_bucket": 2000,
+    "utility_thresholds": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "n_bootstrap": 2000,
+    "ece_bins": 15,
+    "seeds": [
+      20260202,
+      20260203,
+      20260204
+    ],
+    "seed_index": 2,
+    "allow_fixture": false
+  },
+  "inputs": [],
+  "missing_inputs": [],
+  "n_outputs": 12,
+  "outputs": [
+    {
+      "path": "audited_subset_assistments_2021.json",
+      "bytes": 2778,
+      "sha256": "12eba56c5d2a323086b4b262f39fd8692f7d4ec1f87a4436a1f21bf44bfc25c8"
+    },
+    {
+      "path": "tables/table0_dataset_characteristics.csv",
+      "bytes": 267,
+      "sha256": "07b898d35cb81e8e8a2378000fef9e3e33750aedc9f68e9c63ba512eb22874de"
+    },
+    {
+      "path": "tables/table0_dataset_characteristics.tex",
+      "bytes": 437,
+      "sha256": "0f924d281ef77d5ba1b055ace26d8d1910f3d118b8cc1749b66753074df48ece"
+    },
+    {
+      "path": "tables/table1_audit_assistments_2021.csv",
+      "bytes": 1589,
+      "sha256": "b0b008d94adbccd23fe67ee6796b244bfc1c21ccae97f6bd27ea7353b71e5731"
+    },
+    {
+      "path": "tables/table1_audit_assistments_2021.tex",
+      "bytes": 1646,
+      "sha256": "24cde36898f21a40812b516cf6ab884d2dbe5c94662a4d0a933bb938a9392ffc"
+    },
+    {
+      "path": "tables/table1_convergent_matrix.csv",
+      "bytes": 250,
+      "sha256": "f4a4842a38bfd6a785b743e6268b25b590954e77f0acb711c20b4be3e4dd5f13"
+    },
+    {
+      "path": "tables/table1_convergent_matrix.tex",
+      "bytes": 280,
+      "sha256": "098ff195903d40e92960c1d36ed6b7fede7efc57b84fa25941218fc4fc053ee2"
+    },
+    {
+      "path": "tables/table1_verdict_matrix.csv",
+      "bytes": 172,
+      "sha256": "0d82e42bad8d47778e7c146558f99446b8c5ff4dcf6e0d2dbe0bc4c4ddb4f659"
+    },
+    {
+      "path": "tables/table1_verdict_matrix.tex",
+      "bytes": 278,
+      "sha256": "b90a5c7c8a77b8f59945f7db9adf09b12beceba3e4e87bc012f2f60d9f2e7cea"
+    },
+    {
+      "path": "figures/fig1_convergent_validity.pdf",
+      "bytes": 15548,
+      "sha256": "dd239f04ce76e572015d53490514e66f5218b31aadcc34ae3e636c66f3080fa1"
+    },
+    {
+      "path": "figures/fig1_convergent_validity.png",
+      "bytes": 89498,
+      "sha256": "1d55512e1af2137bc627a3129d1581de59e44f6be2e8360699f500356a3bf3fb"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 5692,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "RQ1__assistments_2021__seed1": 14
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ1",
+  "dataset": "assistments_2021",
+  "seed": 20260204,
+  "seed_index": 2,
+  "dataset_stats": {
+    "assistments_2021": {
+      "n_learners": 15325,
+      "n_interactions": 1135067,
+      "n_kc": 394,
+      "n_items": 69229,
+      "correct_rate": 0.668552577495575,
+      "median_span_days": 48.87990861111111,
+      "mean_span_days": 45.61825464410911
+    }
+  },
+  "audited_subset": [
+    "C_t",
+    "H_t",
+    "I_t"
+  ],
+  "data_paths": {
+    "plogs": "/home/hamed/Downloads/Research/dataset/feb_to_apr/plogs.csv",
+    "details": "/home/hamed/Downloads/Research/dataset/feb_to_apr/pdets.csv"
+  }
+}

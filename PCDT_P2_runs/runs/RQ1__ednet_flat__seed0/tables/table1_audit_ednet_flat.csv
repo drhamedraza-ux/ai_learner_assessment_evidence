@@ -1,0 +1,7 @@
+dimension,proxy,alpha,split_half,convergent,sim_recovery,note,verdict
+I_t (identity),split-half baseline-ability trait,,0.7537043401734754,0.625044828200563,0.625044828200563,"CIRCULARITY WARNING: reliability is borrowed from C_proxy, and convergent validity is the SAME statistic as sim_recovery (corr(ability_h1, ability_h2)) -- i.e. I_t is validated against its own stability. Treat the 'retain' verdict as computational persistence of ability, NOT as an independently validated construct. See AUDIT_REPORT.md Finding 2",retain
+C_t (cognition),running per-KC correctness (mastery estimate),,0.7537043401734754,0.4253137564454133,,,retain
+B_t (behaviour),latency-only (no hint/attempt in this dataset),0.37922946587746553,0.0,-0.013925264691257955,,,reject
+M_t (metacognition),latency-accuracy coupling (prev_rt_z vs correction),,0.0,0.08897661748493409,0.08897661748493409,"split-half floored at 0: the two history halves correlate NEGATIVELY, so this is 'not internally consistent', not 'reliability measured as 0'",reject
+G_t (goals),curricular-progress fraction (no goal annotation in ednet_flat),,1.0,0.13887490265999333,,"reliability is 1.000 BY CONSTRUCTION: the proxy is a deterministic 0->1 ramp in sequence position, so its halves correlate perfectly. Read this as 'not a measurement', not as 'perfectly reliable'",reject
+H_t (historical memory),recency-weighted prior correctness; retained only if it adds OVER C_t,,0.8213328800401426,0.7657962670948252,0.185406243343693,"sim_recovery column holds INCREMENTAL validity over C_t, not simulator recovery",retain

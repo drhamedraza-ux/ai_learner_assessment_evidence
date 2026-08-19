@@ -1,0 +1,79 @@
+==============================================================================
+RUN RQ1__ednet_flat__seed0
+RQ1 construct-validity audit — EdNet-KT1, seed 20260202
+started   2026-08-17 20:05:01   pid 713140
+writes to /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__ednet_flat__seed0
+reads     nothing — this notebook is a producer
+concurrent runs detected: RQ1__junyi__seed1, RQ1__junyi__seed2
+  (parallel execution is supported and expected — see RUN_ORDER.md)
+==============================================================================
+  data flat      /home/hamed/Downloads/Research/dataset/EdNet/ednet_kt1_flat.csv
+==============================================================================
+ednet_flat
+[ednet_flat] 15,324 learners | 4,934,433 interactions | 11,857 items | 142 skills | correct 0.669 | median span 1.2 d
+        behavioural signals present: ['response_time']
+  OK  15,324 learners | 4,934,433 interactions | 142 KCs
+      correct 0.669 | median span 1.2 d | mean span 68.3 d
+      NOTE short median span; quote the mean and the gap distribution too — a short median with a long mean means a bimodal population, not an unusable dataset.
+Table 0. Dataset characteristics for THIS SEED's learner sample.
+
+   dataset  learners  interactions  items  KCs  correct_rate  median_span_d  mean_span_d  pct_gap_ge_1wk  pct_gap_ge_4wk  pct_gap_ge_8wk  hint  attempt     seed  sampled_from_max_learners
+ednet_flat     15324       4934433  11857  142        0.6686           1.17        68.26            37.5            24.1            18.2 False    False 20260202                      20000
+
+These are not fixed properties of the datasets. Seeds 20260202/20260203/20260204 draw different samples, so learners, interactions, items, KCs and correct-rate all differ between them. Report Table 1 of the manuscript for the PRIMARY seed and say so, or report the three side by side — do not present one seed's counts as the dataset's. Cross-seed agreement elsewhere is correspondingly STRONGER than a split-only resampling would give, and is worth stating in those terms.
+ednet_flat         struggle-signal B_t: False | 15,324 learners with a split-half ability pair
+
+==============================================================================
+Table 1 — ednet_flat
+
+              dimension                                                                 proxy    alpha  split_half  convergent  sim_recovery verdict
+         I_t (identity)                                     split-half baseline-ability trait      n/a    0.753704    0.625045      0.625045  retain
+        C_t (cognition)                         running per-KC correctness (mastery estimate)      n/a    0.753704    0.425314           n/a  retain
+        B_t (behaviour)                        latency-only (no hint/attempt in this dataset) 0.379229    0.000000   -0.013925           n/a  reject
+    M_t (metacognition)                   latency-accuracy coupling (prev_rt_z vs correction)      n/a    0.000000    0.088977      0.088977  reject
+            G_t (goals)       curricular-progress fraction (no goal annotation in ednet_flat)      n/a    1.000000    0.138875           n/a  reject
+H_t (historical memory) recency-weighted prior correctness; retained only if it adds OVER C_t      n/a    0.821333    0.765796      0.185406  retain
+  NOTE [I_t] CIRCULARITY WARNING: reliability is borrowed from C_proxy, and convergent validity is the SAME statistic as sim_recovery (corr(ability_h1, ability_h2)) -- i.e. I_t is validated against its own stability. Treat the 'retain' verdict as computational persistence of ability, NOT as an independently validated construct. See AUDIT_REPORT.md Finding 2
+  NOTE [M_t] split-half floored at 0: the two history halves correlate NEGATIVELY, so this is 'not internally consistent', not 'reliability measured as 0'
+  NOTE [G_t] reliability is 1.000 BY CONSTRUCTION: the proxy is a deterministic 0->1 ramp in sequence position, so its halves correlate perfectly. Read this as 'not a measurement', not as 'perfectly reliable'
+  NOTE [H_t] sim_recovery column holds INCREMENTAL validity over C_t, not simulator recovery
+Verdict by dimension — ednet_flat
+
+                        ednet_flat
+dimension                         
+I_t (identity)              retain
+C_t (cognition)             retain
+B_t (behaviour)             reject
+M_t (metacognition)         reject
+G_t (goals)                 reject
+H_t (historical memory)     retain
+
+Convergent validity (r) — ednet_flat
+
+                         ednet_flat
+dimension                          
+I_t (identity)                0.625
+C_t (cognition)               0.425
+B_t (behaviour)              -0.014
+M_t (metacognition)           0.089
+G_t (goals)                   0.139
+H_t (historical memory)       0.766
+
+retained: ['I_t (identity)', 'C_t (cognition)', 'H_t (historical memory)']
+rejected: ['B_t (behaviour)', 'M_t (metacognition)', 'G_t (goals)']
+
+Whether these verdicts agree ACROSS datasets and seeds is answered in SUMMARY__all, which reads every RQ1 run. It is deliberately not answered here: this notebook sees one dataset at one seed and must not imply otherwise.
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__ednet_flat__seed0/tables: ['table1_audit_ednet_flat']
+ednet_flat         retained=['I_t', 'C_t', 'H_t']  proxy_only=[]  -> model_dimensions=['C_t', 'H_t', 'I_t']
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__ednet_flat__seed0/tables: ['table0_dataset_characteristics', 'table1_convergent_matrix', 'table1_verdict_matrix']
+
+==============================================================================
+RUN RQ1__ednet_flat__seed0 — complete
+  runtime        0.57 min
+  files written  12
+  inputs read    0 (0 missing)
+  concurrent     RQ1__junyi__seed1 (14 files), RQ1__junyi__seed2 (14 files)
+                 ran alongside this one and wrote only into its own folder — expected, not a problem
+  isolation      OK — no finished run was modified
+  manifest       /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__ednet_flat__seed0/manifest.json
+==============================================================================

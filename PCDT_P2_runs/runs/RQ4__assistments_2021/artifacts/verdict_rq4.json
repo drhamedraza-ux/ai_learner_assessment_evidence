@@ -1,0 +1,70 @@
+{
+  "notebook": "03_RQ4_ranking_divergence_confirmation",
+  "generated": "2026-08-18 13:23:32",
+  "dataset": "assistments_2021",
+  "runs": {
+    "s1": {
+      "run_id": "RQ2RQ3__assistments_2021__seed0",
+      "seed": 20260202,
+      "role": "exploratory"
+    },
+    "s2": {
+      "run_id": "RQ2RQ3__assistments_2021__seed1",
+      "seed": 20260203,
+      "role": "exploratory"
+    },
+    "s3": {
+      "run_id": "RQ2RQ3__assistments_2021__seed2",
+      "seed": 20260204,
+      "role": "CONFIRMATORY"
+    }
+  },
+  "preregistered_primary_rule": "comparator ranks outside the top 3 within session AND first at every adequate real gap horizon, on the confirmatory seed",
+  "preregistered_secondary_rule": "bootstrap CI for AUC(PCDT)-AUC(comparator) positive within session and negative at >=1 adequate real gap",
+  "verdict": {
+    "primary_confirmed": false,
+    "adequate_horizons": [
+      "d1",
+      "d7"
+    ],
+    "comparator": "PCDT-noPsi",
+    "failing_leg": "leg1: comparator ranks inside the top 3 within session",
+    "selection_sensitivity": {
+      "comparator_from_exploratory": "DKT-F",
+      "comparator_from_confirmatory": "PCDT-noPsi",
+      "same_comparator": false,
+      "within_rank_on_s3": 3,
+      "leg1": false,
+      "leg2": false,
+      "divergence": false
+    },
+    "secondary_confirmed": false,
+    "sign_flip_by_seed": {
+      "s1": {
+        "within_positive_sig": true,
+        "any_gap_negative_sig": true,
+        "sign_flip": true
+      },
+      "s2": {
+        "within_positive_sig": false,
+        "any_gap_negative_sig": false,
+        "sign_flip": false
+      },
+      "s3": {
+        "within_positive_sig": false,
+        "any_gap_negative_sig": true,
+        "sign_flip": false
+      }
+    }
+  },
+  "errors": [],
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  }
+}

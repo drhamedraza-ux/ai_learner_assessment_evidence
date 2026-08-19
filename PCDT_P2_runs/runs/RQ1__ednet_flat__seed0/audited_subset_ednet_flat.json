@@ -1,0 +1,78 @@
+{
+  "dataset": "ednet_flat",
+  "seed": 20260202,
+  "thresholds": {
+    "reliability": 0.6,
+    "convergent": 0.3,
+    "simulator_recovery": 0.5,
+    "warm_min_history": 5
+  },
+  "retained": [
+    "I_t",
+    "C_t",
+    "H_t"
+  ],
+  "proxy_only": [],
+  "model_dimensions": [
+    "C_t",
+    "H_t",
+    "I_t"
+  ],
+  "uncertainty": "belief-level (Sigma_t), not a state coordinate",
+  "per_dimension": {
+    "I_t": {
+      "proxy": "split-half baseline-ability trait",
+      "alpha": null,
+      "split_half": 0.7537043401734754,
+      "convergent": 0.625044828200563,
+      "sim_recovery": 0.625044828200563,
+      "note": "CIRCULARITY WARNING: reliability is borrowed from C_proxy, and convergent validity is the SAME statistic as sim_recovery (corr(ability_h1, ability_h2)) -- i.e. I_t is validated against its own stability. Treat the 'retain' verdict as computational persistence of ability, NOT as an independently validated construct. See AUDIT_REPORT.md Finding 2",
+      "verdict": "retain"
+    },
+    "C_t": {
+      "proxy": "running per-KC correctness (mastery estimate)",
+      "alpha": null,
+      "split_half": 0.7537043401734754,
+      "convergent": 0.4253137564454133,
+      "sim_recovery": null,
+      "note": "",
+      "verdict": "retain"
+    },
+    "B_t": {
+      "proxy": "latency-only (no hint/attempt in this dataset)",
+      "alpha": 0.37922946587746553,
+      "split_half": 0.0,
+      "convergent": -0.013925264691257955,
+      "sim_recovery": null,
+      "note": "",
+      "verdict": "reject"
+    },
+    "M_t": {
+      "proxy": "latency-accuracy coupling (prev_rt_z vs correction)",
+      "alpha": null,
+      "split_half": 0.0,
+      "convergent": 0.08897661748493409,
+      "sim_recovery": 0.08897661748493409,
+      "note": "split-half floored at 0: the two history halves correlate NEGATIVELY, so this is 'not internally consistent', not 'reliability measured as 0'",
+      "verdict": "reject"
+    },
+    "G_t": {
+      "proxy": "curricular-progress fraction (no goal annotation in ednet_flat)",
+      "alpha": null,
+      "split_half": 1.0,
+      "convergent": 0.13887490265999333,
+      "sim_recovery": null,
+      "note": "reliability is 1.000 BY CONSTRUCTION: the proxy is a deterministic 0->1 ramp in sequence position, so its halves correlate perfectly. Read this as 'not a measurement', not as 'perfectly reliable'",
+      "verdict": "reject"
+    },
+    "H_t": {
+      "proxy": "recency-weighted prior correctness; retained only if it adds OVER C_t",
+      "alpha": null,
+      "split_half": 0.8213328800401426,
+      "convergent": 0.7657962670948252,
+      "sim_recovery": 0.185406243343693,
+      "note": "sim_recovery column holds INCREMENTAL validity over C_t, not simulator recovery",
+      "verdict": "retain"
+    }
+  }
+}

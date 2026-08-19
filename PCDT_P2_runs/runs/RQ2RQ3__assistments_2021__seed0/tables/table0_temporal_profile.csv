@@ -1,0 +1,19 @@
+statistic,value
+count,15406.0
+mean,46.11840005044932
+std,30.800201245684754
+min,0.0
+25%,16.21882092303241
+50%,49.04792710069445
+75%,75.97261462962963
+90%,83.96050664930556
+95%,85.84861210358797
+max,149.96648885416667
+% learners with span >= 1 week(s),82.110865896404
+% learners with a GAP >= 1 week(s),77.19070492016098
+% learners with span >= 2 week(s),77.14526807737245
+% learners with a GAP >= 2 week(s),55.69258730364793
+% learners with span >= 4 week(s),67.18810852914449
+% learners with a GAP >= 4 week(s),20.310268726470206
+% learners with span >= 8 week(s),44.60599766324809
+% learners with a GAP >= 8 week(s),2.155004543684279

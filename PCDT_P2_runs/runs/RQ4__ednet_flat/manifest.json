@@ -1,0 +1,232 @@
+{
+  "run_id": "RQ4__ednet_flat",
+  "description": "RQ4 ranking divergence \u2014 EdNet-KT1, 3 seeds",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 13:25:49",
+  "finished": "2026-08-18 13:36:19",
+  "runtime_minutes": 10.5,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4__ednet_flat",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": {
+    "dataset": "ednet_flat",
+    "root": "/home/hamed/Downloads/Research/dataset",
+    "out_root": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs",
+    "max_learners": 20000,
+    "min_seq_len": 10,
+    "max_seq_len": 200,
+    "train_frac": 0.5,
+    "val_frac": 0.1,
+    "test_frac": 0.4,
+    "split_mode": "learner",
+    "param_budget": 350000,
+    "param_tolerance": 0.05,
+    "batch_size": 64,
+    "weight_decay": 1e-05,
+    "max_epochs": 30,
+    "patience": 5,
+    "grad_clip": 5.0,
+    "search_lrs": [
+      0.0005,
+      0.001,
+      0.002
+    ],
+    "use_persistence": true,
+    "dkvmn_legacy_lag": false,
+    "tau0_seconds": 3600.0,
+    "session_gap_s": 1200,
+    "reliability_floor": 0.6,
+    "convergent_floor": 0.3,
+    "simulator_recovery_floor": 0.5,
+    "min_meaningful_auc_delta": 0.01,
+    "warm_min_history": 5,
+    "min_learners_bucket": 300,
+    "min_points_bucket": 2000,
+    "utility_thresholds": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "n_bootstrap": 2000,
+    "ece_bins": 15,
+    "seeds": [
+      20260202,
+      20260203,
+      20260204
+    ],
+    "seed_index": 0,
+    "allow_fixture": false
+  },
+  "inputs": [
+    {
+      "label": "RQ2RQ3__ednet_flat__seed0/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed0/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "0e33e1f846054bff026d6105ff8764ce578430786746cf8ac380be2638e534ff",
+      "bytes": 1233,
+      "mtime": "2026-08-18 12:25:04"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed0/predictions",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed0/artifacts/predictions_test.npz",
+      "present": true,
+      "sha256": "37b1696c4f929f9b833eb7f40f7882d2b88ee8c45f06b3f1ba2db48af5978434",
+      "bytes": 29824590,
+      "mtime": "2026-08-18 11:38:14"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed1/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed1/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "6493cb61118a890d048544d85935c097e4240cbdd1086e03339fd2ae1e45f4f6",
+      "bytes": 1232,
+      "mtime": "2026-08-18 12:28:36"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed1/predictions",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed1/artifacts/predictions_test.npz",
+      "present": true,
+      "sha256": "83e6ec6573b400b06a45f95499ed7865d018523681590b4e14ab791a860585fc",
+      "bytes": 29662231,
+      "mtime": "2026-08-18 11:41:26"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed2/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed2/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "3726f21f262e024e0960791e20ee2f6ad8deaf5f5410e0250bde10f2afc66963",
+      "bytes": 1235,
+      "mtime": "2026-08-18 12:30:04"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed2/predictions",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed2/artifacts/predictions_test.npz",
+      "present": true,
+      "sha256": "b19725fbaea386b7756401573bed5601945ab99658eb3b55b1bb087abbfe7b6d",
+      "bytes": 29103157,
+      "mtime": "2026-08-18 11:43:05"
+    }
+  ],
+  "missing_inputs": [],
+  "n_outputs": 10,
+  "outputs": [
+    {
+      "path": "artifacts/verdict_rq4.json",
+      "bytes": 1978,
+      "sha256": "687443b4f80ec449734d712f1be9c8f2ca5ec1f670529234def653b01c7a705c"
+    },
+    {
+      "path": "tables/table10_rankings_by_seed.csv",
+      "bytes": 1679,
+      "sha256": "6e685e8dcfc096f7070527a31f68737250230169aa33f8f804b0b707acae1dfe"
+    },
+    {
+      "path": "tables/table10_rankings_by_seed.tex",
+      "bytes": 1705,
+      "sha256": "91d64db01cdf753b9908b5cbb24420c020e073cbbf9cb26cc3d5e6c2ce116f45"
+    },
+    {
+      "path": "tables/table11_primary_rule_by_seed.csv",
+      "bytes": 304,
+      "sha256": "4583c82be4b277d6986e1aa2be08390b811dc0ca99725a1085060d4d9f56abc3"
+    },
+    {
+      "path": "tables/table11_primary_rule_by_seed.tex",
+      "bytes": 460,
+      "sha256": "c4ea82141e92ebed66cfd3292641ff08e680c2058cb477b249cc94c147c1a799"
+    },
+    {
+      "path": "tables/table12_secondary_magnitude.csv",
+      "bytes": 1096,
+      "sha256": "157eecbd50a62f04abb677320e11a76f9b725ee5fb55b43f3391634708466dc3"
+    },
+    {
+      "path": "tables/table12_secondary_magnitude.tex",
+      "bytes": 1001,
+      "sha256": "98ad1a77940d14795804daeeabae8e147e744be548c1c2bd40588618cb995ade"
+    },
+    {
+      "path": "tables/table13_selection_sensitivity.csv",
+      "bytes": 155,
+      "sha256": "8e5d476558b31cbe5bb0af253671686f9acd6b427a9c62d5a4b299b2b8601cd4"
+    },
+    {
+      "path": "tables/table13_selection_sensitivity.tex",
+      "bytes": 262,
+      "sha256": "b54dee5a1b7a6b5e4138e5f0b8c161a1cc6e03937e03c7757350a258157a3666"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 7088,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "RQ2RQ3__junyi__seed1": 1,
+    "RQ2RQ3__junyi__seed0": 1
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ4",
+  "dataset": "ednet_flat",
+  "seed_roles": {
+    "s1": "exploratory",
+    "s2": "exploratory",
+    "s3": "CONFIRMATORY"
+  },
+  "verdict": {
+    "primary_confirmed": false,
+    "adequate_horizons": [
+      "d1",
+      "d7"
+    ],
+    "comparator": "DKVMN",
+    "failing_leg": "leg1: comparator ranks inside the top 3 within session",
+    "selection_sensitivity": {
+      "comparator_from_exploratory": "PCDT-noPsi",
+      "comparator_from_confirmatory": "DKVMN",
+      "same_comparator": false,
+      "within_rank_on_s3": 1,
+      "leg1": false,
+      "leg2": false,
+      "divergence": false
+    },
+    "secondary_confirmed": false,
+    "sign_flip_by_seed": {
+      "s1": {
+        "within_positive_sig": true,
+        "any_gap_negative_sig": false,
+        "sign_flip": false
+      },
+      "s2": {
+        "within_positive_sig": false,
+        "any_gap_negative_sig": true,
+        "sign_flip": false
+      },
+      "s3": {
+        "within_positive_sig": false,
+        "any_gap_negative_sig": true,
+        "sign_flip": false
+      }
+    }
+  }
+}

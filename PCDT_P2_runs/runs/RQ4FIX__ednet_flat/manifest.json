@@ -1,0 +1,135 @@
+{
+  "run_id": "RQ4FIX__ednet_flat",
+  "description": "RQ4 re-verdict with corrected DKVMN \u2014 ednet_flat",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 19:41:39",
+  "finished": "2026-08-18 19:41:39",
+  "runtime_minutes": 0.0,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__ednet_flat",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": null,
+  "inputs": [
+    {
+      "label": "DKVMNFIX__ednet_flat__seed0/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__ednet_flat__seed0/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "0e33e1f846054bff026d6105ff8764ce578430786746cf8ac380be2638e534ff",
+      "bytes": 1233,
+      "mtime": "2026-08-18 18:38:08"
+    },
+    {
+      "label": "DKVMNFIX__ednet_flat__seed1/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__ednet_flat__seed1/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "6493cb61118a890d048544d85935c097e4240cbdd1086e03339fd2ae1e45f4f6",
+      "bytes": 1232,
+      "mtime": "2026-08-18 18:39:57"
+    },
+    {
+      "label": "DKVMNFIX__ednet_flat__seed2/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__ednet_flat__seed2/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "3726f21f262e024e0960791e20ee2f6ad8deaf5f5410e0250bde10f2afc66963",
+      "bytes": 1235,
+      "mtime": "2026-08-18 18:40:33"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed0/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed0/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "0e33e1f846054bff026d6105ff8764ce578430786746cf8ac380be2638e534ff",
+      "bytes": 1233,
+      "mtime": "2026-08-18 12:25:04"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed1/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed1/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "6493cb61118a890d048544d85935c097e4240cbdd1086e03339fd2ae1e45f4f6",
+      "bytes": 1232,
+      "mtime": "2026-08-18 12:28:36"
+    },
+    {
+      "label": "RQ2RQ3__ednet_flat__seed2/table9",
+      "path": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed2/tables/table9_postgap_auc_by_model.csv",
+      "present": true,
+      "sha256": "3726f21f262e024e0960791e20ee2f6ad8deaf5f5410e0250bde10f2afc66963",
+      "bytes": 1235,
+      "mtime": "2026-08-18 12:30:04"
+    }
+  ],
+  "missing_inputs": [],
+  "n_outputs": 6,
+  "outputs": [
+    {
+      "path": "artifacts/verdict_rq4_corrected.json",
+      "bytes": 428,
+      "sha256": "beafb64ce6777f1444f5449180dac755868b1bdb7b95b055183018820301c28a"
+    },
+    {
+      "path": "tables/table11_primary_rule_archived.csv",
+      "bytes": 307,
+      "sha256": "24dd51ab9eb63cd9e2cbafe0fd3cb0bac18729d945f56fe651704c126a857024"
+    },
+    {
+      "path": "tables/table11_primary_rule_archived.tex",
+      "bytes": 453,
+      "sha256": "df5e319abacff615b89e1ba0e1fc4839df0681fa5e5d9254cd20de20fb49e9de"
+    },
+    {
+      "path": "tables/table11_primary_rule_corrected.csv",
+      "bytes": 307,
+      "sha256": "24dd51ab9eb63cd9e2cbafe0fd3cb0bac18729d945f56fe651704c126a857024"
+    },
+    {
+      "path": "tables/table11_primary_rule_corrected.tex",
+      "bytes": 453,
+      "sha256": "df5e319abacff615b89e1ba0e1fc4839df0681fa5e5d9254cd20de20fb49e9de"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 2588,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {},
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ4 (corrected DKVMN)",
+  "dataset": "ednet_flat",
+  "verdict": {
+    "dataset": "ednet_flat",
+    "rule": "UNCHANGED from the pre-registration: comparator ranks outside the top 3 within session AND first at every adequate real gap horizon, on the confirmatory seed",
+    "archived": {
+      "comparator": "DKVMN",
+      "confirmed": false
+    },
+    "corrected": {
+      "comparator": "DKVMN",
+      "confirmed": false,
+      "adequate_horizons": [
+        "d1",
+        "d7"
+      ]
+    },
+    "verdict_changed": false
+  }
+}

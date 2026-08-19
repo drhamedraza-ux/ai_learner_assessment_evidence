@@ -1,0 +1,265 @@
+{
+  "run_id": "RQ2RQ3__assistments_2021__seed1",
+  "description": "RQ2 + RQ3 \u2014 ASSISTments 2020-21, seed 20260203",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-17 20:12:52",
+  "finished": "2026-08-17 21:47:56",
+  "runtime_minutes": 95.07,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__assistments_2021__seed1",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": {
+    "dataset": "assistments_2021",
+    "root": "/home/hamed/Downloads/Research/dataset",
+    "out_root": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs",
+    "max_learners": 20000,
+    "min_seq_len": 10,
+    "max_seq_len": 200,
+    "train_frac": 0.5,
+    "val_frac": 0.1,
+    "test_frac": 0.4,
+    "split_mode": "learner",
+    "param_budget": 350000,
+    "param_tolerance": 0.05,
+    "batch_size": 64,
+    "weight_decay": 1e-05,
+    "max_epochs": 30,
+    "patience": 5,
+    "grad_clip": 5.0,
+    "search_lrs": [
+      0.0005,
+      0.001,
+      0.002
+    ],
+    "use_persistence": true,
+    "dkvmn_legacy_lag": false,
+    "tau0_seconds": 3600.0,
+    "session_gap_s": 1200,
+    "reliability_floor": 0.6,
+    "convergent_floor": 0.3,
+    "simulator_recovery_floor": 0.5,
+    "min_meaningful_auc_delta": 0.01,
+    "warm_min_history": 5,
+    "min_learners_bucket": 300,
+    "min_points_bucket": 2000,
+    "utility_thresholds": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "n_bootstrap": 2000,
+    "ece_bins": 15,
+    "seeds": [
+      20260202,
+      20260203,
+      20260204
+    ],
+    "seed_index": 1,
+    "allow_fixture": false
+  },
+  "inputs": [],
+  "missing_inputs": [],
+  "n_outputs": 32,
+  "outputs": [
+    {
+      "path": "artifacts/model_AKT.pt",
+      "bytes": 1410910,
+      "sha256": "76f3b5a02f0edf7cb809089eb9c312ef17ddda52511656d2ecbb6b2825a55d71"
+    },
+    {
+      "path": "artifacts/model_Control.pt",
+      "bytes": 1406318,
+      "sha256": "31376e1d3448dbbff6304f14be8c0992978942fb4ac7977f8891e4c9240fed70"
+    },
+    {
+      "path": "artifacts/model_DKT-F.pt",
+      "bytes": 1400901,
+      "sha256": "8f055809465d99f200731a60ea018ca1f8e9b19bc7368c810e8382a584bdc715"
+    },
+    {
+      "path": "artifacts/model_DKT.pt",
+      "bytes": 1396145,
+      "sha256": "69c719efd7565f77ab8d3fc22ccdc4b04cdb5516d58ba05ba9bb5a071082a5ce"
+    },
+    {
+      "path": "artifacts/model_DKVMN.pt",
+      "bytes": 1406599,
+      "sha256": "fcf8970a795c3785be5b897e924047a8d100d461bda93bcee1738043afd2887e"
+    },
+    {
+      "path": "artifacts/model_PCDT-noPsi.pt",
+      "bytes": 1406375,
+      "sha256": "1097c2161429856b8e862f465e92fb2a07dc47563f970aefcbe1a7059f9b93a8"
+    },
+    {
+      "path": "artifacts/model_PCDT.pt",
+      "bytes": 1406069,
+      "sha256": "891143972cb1a18d4d71c82b6214e29a8f6bfc870598a72cbc47e41e852c5b11"
+    },
+    {
+      "path": "artifacts/model_SAKT.pt",
+      "bytes": 1400885,
+      "sha256": "e59e931d6ca369b4eff218668b0860d7a81002f2ac0f62155f7371c6891b938c"
+    },
+    {
+      "path": "artifacts/predictions_test.npz",
+      "bytes": 27722556,
+      "sha256": "932fa90b27c173ae50ea81157d9f4be586c5804fa8178198af21c0345779b98e"
+    },
+    {
+      "path": "tables/table0_temporal_profile.csv",
+      "bytes": 637,
+      "sha256": "353ffa1c9348810b02d99e8b7f7e6502e33d9af087c10a78bf6023bdcfd752ee"
+    },
+    {
+      "path": "tables/table0_temporal_profile.tex",
+      "bytes": 653,
+      "sha256": "81e8c157bbbda23aa6517d0203432e81539089b08208a901bbdb0abc820b6ea4"
+    },
+    {
+      "path": "tables/table1_bucket_counts.csv",
+      "bytes": 138,
+      "sha256": "cebc8a7202a4fb92bc1562e2d966af89d65d9c8e0739209b7dc1e130cd150bea"
+    },
+    {
+      "path": "tables/table1_bucket_counts.tex",
+      "bytes": 258,
+      "sha256": "f2f8519044b706e6c4a5650c983279bff6c72b4fae308afa31ec33edcc2ba947"
+    },
+    {
+      "path": "tables/table2_predictive.csv",
+      "bytes": 1286,
+      "sha256": "fd1df3bbd27d78662a94a58827969437d1f46ee5f2730600f02de8b799d6832d"
+    },
+    {
+      "path": "tables/table2_predictive.tex",
+      "bytes": 994,
+      "sha256": "ae60f03a96637ce42af7b497f494e13776167d035b043fa6ce64f793d28b868c"
+    },
+    {
+      "path": "tables/table3_statistics.csv",
+      "bytes": 880,
+      "sha256": "7cc38f3ceeeee79f361089d5519f8fd2f1b4207f990fb7957a4496799f82dc88"
+    },
+    {
+      "path": "tables/table3_statistics.tex",
+      "bytes": 834,
+      "sha256": "5153b854d0cceeec71934c6d15e281720de419b15430606724d1a045d9155488"
+    },
+    {
+      "path": "tables/table5_persistence.csv",
+      "bytes": 726,
+      "sha256": "a883c2f24b6b8bf9d2a23b2c97d42ac328098a0c9f36a90193eb0a17f32c2fce"
+    },
+    {
+      "path": "tables/table5_persistence.tex",
+      "bytes": 736,
+      "sha256": "cb13be1619bbfda5e74fdac6e890a6faaf52007a2d82df898b09c7ae2fdee2e9"
+    },
+    {
+      "path": "tables/table6_educational_utility.csv",
+      "bytes": 4048,
+      "sha256": "b635fffa09219dbd2eb4bd8cedb916e35416118188e45534beea1bd65d4e7019"
+    },
+    {
+      "path": "tables/table6_educational_utility.tex",
+      "bytes": 3467,
+      "sha256": "f73d2f54e1c93b16b5b5b25cb0334dcd49deea6547311b7d988eee921c474be0"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.csv",
+      "bytes": 458,
+      "sha256": "051d244fe0a2e6918319a8ea5eec6065999c63fb52e4761cae53099cd1e0b444"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.tex",
+      "bytes": 428,
+      "sha256": "1cfa813cefa1eb42958612a3734e648e6a47a07cbb114fb171b85fcdd768c0f2"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.csv",
+      "bytes": 1243,
+      "sha256": "36eedfaa21745981fd9ff808e79c0ed42740eae8a64dab3fa0eadcaecf6932cd"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.tex",
+      "bytes": 1190,
+      "sha256": "1fa1bdca9a341c41a880b061cae3c7bd7fb884ae29a079c2e25b34b0be7996e5"
+    },
+    {
+      "path": "figures/fig_retention.pdf",
+      "bytes": 17324,
+      "sha256": "97b7dbc8a12fe22d23f5d67a1f30d87046740a1e5bd78d3bc7c796e4a3f0c92b"
+    },
+    {
+      "path": "figures/fig_retention.png",
+      "bytes": 82235,
+      "sha256": "19e64f9a5afeebc9c18c93729239d6012e2d7487348ef2887a86b6870f2fb434"
+    },
+    {
+      "path": "figures/fig_roc_all_models.pdf",
+      "bytes": 117047,
+      "sha256": "3fa4fbe44159d0c0d02261adb4e57ea81d88aa3d4628eb3cb36caa480b393a60"
+    },
+    {
+      "path": "figures/fig_roc_all_models.png",
+      "bytes": 174501,
+      "sha256": "d6575de04e2ab7c3caaf37a84a1804983159b0bb3f6add6a5c346fed74790479"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap.pdf",
+      "bytes": 16716,
+      "sha256": "e37fcad3b526041a0e463f73651b7bd0a8a9b2af88a51c18fe502faa0fd2bbcb"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap.png",
+      "bytes": 106666,
+      "sha256": "8f475394eef74b8c5b617baa67911e8942b8e262b2fd34ac863f63014d894f8f"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 15909,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "RQ2RQ3__assistments_2021__seed2": 11,
+    "RQ2RQ3__assistments_2021__seed0": 34
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ2+RQ3",
+  "dataset": "assistments_2021",
+  "seed": 20260203,
+  "seed_index": 1,
+  "n_learners": 15378,
+  "strongest_baseline": "DKT-F",
+  "horizons_real": [
+    "d1",
+    "d7",
+    "d28"
+  ],
+  "data_paths": {
+    "plogs": "/home/hamed/Downloads/Research/dataset/feb_to_apr/plogs.csv",
+    "details": "/home/hamed/Downloads/Research/dataset/feb_to_apr/pdets.csv"
+  }
+}

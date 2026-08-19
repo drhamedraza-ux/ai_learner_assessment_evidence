@@ -1,0 +1,4 @@
+dataset,status,comparator,confirmed,secondary,horizons_used,failing_leg
+assistments_2021,complete,PCDT-noPsi,NOT CONFIRMED,not passed,"d1, d7",leg1: comparator ranks inside the top 3 within session
+ednet_flat,complete,DKVMN,CONFIRMED,passed,"d1, d7",none
+junyi,complete,DKVMN,CONFIRMED,passed,"d1, d7, d28",none

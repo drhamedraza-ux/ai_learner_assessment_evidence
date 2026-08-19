@@ -1,0 +1,17 @@
+{
+  "dataset": "assistments_2021",
+  "rule": "UNCHANGED from the pre-registration: comparator ranks outside the top 3 within session AND first at every adequate real gap horizon, on the confirmatory seed",
+  "archived": {
+    "comparator": "PCDT-noPsi",
+    "confirmed": false
+  },
+  "corrected": {
+    "comparator": "PCDT-noPsi",
+    "confirmed": false,
+    "adequate_horizons": [
+      "d1",
+      "d7"
+    ]
+  },
+  "verdict_changed": false
+}

@@ -1,0 +1,129 @@
+==============================================================================
+RUN DKVMNFIX__assistments_2021__seed2
+DKVMN refit with corrected memory ordering — assistments_2021, seed 20260204
+started   2026-08-18 17:13:00   pid 666407
+writes to /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__assistments_2021__seed2
+reads     RQ2RQ3__assistments_2021__seed2/predictions_test.npz, RQ2RQ3__assistments_2021__seed2/table1_bucket_counts.csv
+concurrent runs detected: DKVMNFIX__assistments_2021__seed0, DKVMNFIX__assistments_2021__seed1
+  (parallel execution is supported and expected — see RUN_ORDER.md)
+==============================================================================
+dataset : assistments_2021 | seed: 20260204 | legacy lag: False
+paths   : {'plogs': '/home/hamed/Downloads/Research/dataset/feb_to_apr/plogs.csv', 'details': '/home/hamed/Downloads/Research/dataset/feb_to_apr/pdets.csv'}
+[assistments_2021] 15,325 learners | 1,135,067 interactions | 69,229 items | 394 skills | correct 0.669 | median span 48.9 d
+        behavioural signals present: ['response_time', 'hint_frac', 'attempt_count']
+  train 6,975 learners | 472,029 interactions
+  val   1,393 learners | 96,592 interactions
+  test  5,586 learners | 391,186 interactions
+skill vocabulary (train-derived): 375
+horizon  points  learners
+ within  325503      5585
+sameday   25487      4290
+     d1   24789      4434
+     d7    8607      4050
+    d28    1214      1169
+  read input     RQ2RQ3__assistments_2021__seed2/table1
+         points_now  learners_now  points_archived  learners_archived
+horizon                                                              
+within       325503          5585           325503               5585
+sameday       25487          4290            25487               4290
+d1            24789          4434            24789               4434
+d7             8607          4050             8607               4050
+d28            1214          1169             1214               1169
+
+SPLIT GATE PASSED — every bucket count reproduces the archived run exactly.
+device: cuda
+capacity-matched hidden=182 params=349,805 within tolerance=True
+  lr=0.0005  val AUC=0.7393
+  lr=0.001   val AUC=0.7407
+  lr=0.002   val AUC=0.7398
+selected lr=0.001 val AUC=0.7407  (21.4 min)
+  read input     RQ2RQ3__assistments_2021__seed2/predictions
+wrote predictions_test_dkvmnfix.npz (seven models carried over unchanged, DKVMN replaced, legacy column retained)
+  read input     src/table2
+Table 2 (corrected). Only DKVMN should move.
+
+     model      n     auc     acc    rmse     nll     ece   brier  auc_archived  delta_vs_archived
+       DKT 385600 0.74543 0.72734 0.42906 0.54878 0.00490 0.18409       0.74543                0.0
+      SAKT 385600 0.72366 0.71307 0.43785 0.56698 0.02389 0.19171       0.72366                0.0
+       AKT 385600 0.73050 0.72017 0.43522 0.56249 0.02480 0.18941       0.73050                0.0
+     DKVMN 385600 0.74245 0.72552 0.43034 0.55150 0.01428 0.18520       0.74245                0.0
+     DKT-F 385600 0.75037 0.72895 0.42760 0.54536 0.01831 0.18284       0.75037                0.0
+      PCDT 385600 0.74929 0.73070 0.42705 0.54449 0.00579 0.18238       0.74929                0.0
+PCDT-noPsi 385600 0.74988 0.73041 0.42721 0.54479 0.01026 0.18251       0.74988                0.0
+   Control 385600 0.73478 0.72373 0.43204 0.55533 0.00878 0.18666       0.73478                0.0
+
+confirmed: seven models bit-identical to the archived run; DKVMN moved +0.00000 AUC
+
+strongest tuned baseline is now DKT-F (was DKT-F); PCDT - DKT-F = -0.0011
+H1 NOT SUPPORTED at the pre-registered MMDE of 0.01
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__assistments_2021__seed2/tables: ['table1_bucket_counts', 'table2_predictive', 'table9_postgap_auc_by_model']
+Table 9 (corrected).
+
+     model  auc_within  rank_within  auc_d1  auc_d7  auc_d28  auc_mean_postgap  rank_mean_postgap
+PCDT-noPsi      0.7597          1.0  0.6908  0.6533      n/a            0.6721                1.0
+      PCDT      0.7597          2.0  0.6853  0.6485      n/a            0.6669                5.0
+     DKT-F      0.7588          3.0  0.6929  0.6499      n/a            0.6714                2.0
+       DKT      0.7547          4.0  0.6875  0.6452      n/a            0.6663                6.0
+     DKVMN      0.7516          5.0  0.6881  0.6480      n/a            0.6680                4.0
+   Control      0.7471          6.0  0.6576  0.6269      n/a            0.6422                8.0
+       AKT      0.7412          7.0  0.6692  0.6328      n/a            0.6510                7.0
+      SAKT      0.7301          8.0  0.6878  0.6521      n/a            0.6699                3.0
+  read input     src/table9
+
+DKVMN, archived -> corrected:
+  auc_within           0.7515515775327813 -> 0.7515515775327813   (+0.00000)
+  rank_within                 5.0 ->        5.0   (+0.00000)
+  auc_mean_postgap     0.6680376565016894 -> 0.6680376565016894   (+0.00000)
+  rank_mean_postgap           4.0 ->        4.0   (+0.00000)
+
+Rank movement for every model (archived -> corrected):
+  DKT          within    4 ->    4   postgap    6 ->    6
+  SAKT         within    8 ->    8   postgap    3 ->    3
+  AKT          within    7 ->    7   postgap    7 ->    7
+  DKVMN        within    5 ->    5   postgap    4 ->    4
+  DKT-F        within    3 ->    3   postgap    2 ->    2
+  PCDT         within    2 ->    2   postgap    5 ->    5
+  PCDT-noPsi   within    1 ->    1   postgap    1 ->    1
+  Control      within    6 ->    6   postgap    8 ->    8
+       comparison  delta_auc   ci_lo   ci_hi     p  meaningful  p_holm
+       PCDT - DKT     0.0039  0.0030  0.0047 0.000       False   0.000
+      PCDT - SAKT     0.0256  0.0241  0.0272 0.000        True   0.000
+       PCDT - AKT     0.0188  0.0178  0.0198 0.000        True   0.000
+     PCDT - DKVMN     0.0068  0.0059  0.0077 0.000       False   0.000
+     PCDT - DKT-F    -0.0011 -0.0020 -0.0002 0.015       False   0.030
+PCDT - PCDT-noPsi    -0.0006 -0.0012 -0.0000 0.045       False   0.045
+   PCDT - Control     0.0145  0.0135  0.0156 0.000        True   0.000
+
+Table 5 (corrected). comparators: ['Control', 'DKT-F'] 
+
+ adequate  n_learners  n_points  retention_advantage   ci_lo   ci_hi  auc_pcdt  auc_comparator horizon comparator     source
+     True        4434     24789               0.0151  0.0125  0.0177    0.6853          0.6576      d1    Control       real
+     True        4050      8607               0.0090  0.0047  0.0134    0.6485          0.6269      d7    Control       real
+    False        1169      1214                    -       -       -         -               -     d28    Control INADEQUATE
+     True        4434     24789              -0.0085 -0.0119 -0.0051    0.6853          0.6929      d1      DKT-F       real
+     True        4050      8607              -0.0023 -0.0088  0.0040    0.6485          0.6499      d7      DKT-F       real
+    False        1169      1214                    -       -       -         -               -     d28      DKT-F INADEQUATE
+
+Table 7 (corrected).
+
+removed_or_compared  auc_variant  auc_pcdt  delta_auc   ci_lo   ci_hi     p  meaningful  p_holm
+         PCDT-noPsi       0.7499    0.7493    -0.0006 -0.0012 -0.0000 0.045       False   0.045
+            Control       0.7348    0.7493     0.0145  0.0135  0.0156 0.000        True   0.000
+              DKT-F       0.7504    0.7493    -0.0011 -0.0020 -0.0002 0.015       False   0.030
+
+Table 6 (corrected) — strict wins by comparator:
+  vs Control    14/20 operating points
+  vs DKT-F      0/20 operating points
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__assistments_2021__seed2/tables: ['table3_statistics', 'table5_persistence', 'table6_educational_utility', 'table7_ablation_persistence']
+remaining tables saved BEFORE any figure is drawn
+
+==============================================================================
+RUN DKVMNFIX__assistments_2021__seed2 — complete
+  runtime        58.33 min
+  files written  19
+  inputs read    4 (0 missing)
+  concurrent     DKVMNFIX__assistments_2021__seed0 (21 files), DKVMNFIX__assistments_2021__seed1 (21 files), DKVMNFIX__ednet_flat__seed0 (2 files), DKVMNFIX__ednet_flat__seed1 (2 files), DKVMNFIX__ednet_flat__seed2 (2 files)
+                 ran alongside this one and wrote only into its own folder — expected, not a problem
+  isolation      OK — no finished run was modified
+  manifest       /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/DKVMNFIX__assistments_2021__seed2/manifest.json
+==============================================================================

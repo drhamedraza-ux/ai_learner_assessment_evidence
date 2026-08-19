@@ -1,0 +1,41 @@
+==============================================================================
+RUN RQ4FIX__ednet_flat
+RQ4 re-verdict with corrected DKVMN — ednet_flat
+started   2026-08-18 19:41:39   pid 868542
+writes to /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__ednet_flat
+reads     DKVMNFIX__ednet_flat__seed0/table9, DKVMNFIX__ednet_flat__seed1/table9, DKVMNFIX__ednet_flat__seed2/table9
+concurrent runs detected: DKVMNFIX__junyi__seed0, DKVMNFIX__junyi__seed1, DKVMNFIX__junyi__seed2
+  (parallel execution is supported and expected — see RUN_ORDER.md)
+==============================================================================
+  read input     DKVMNFIX__ednet_flat__seed0/table9
+  read input     DKVMNFIX__ednet_flat__seed1/table9
+  read input     DKVMNFIX__ednet_flat__seed2/table9
+  read input     RQ2RQ3__ednet_flat__seed0/table9
+  read input     RQ2RQ3__ednet_flat__seed1/table9
+  read input     RQ2RQ3__ednet_flat__seed2/table9
+=== ARCHIVED (DKVMN reading one interaction short) ===
+    seed         role comparator  comparator_within_rank  leg1_outside_top3             gap_leaders  leg2_first_all_gaps  divergence
+20260202  exploratory      DKVMN                       3              False      d1:DKVMN; d7:DKVMN                 True       False
+20260203  exploratory      DKVMN                       3              False d1:DKVMN; d7:PCDT-noPsi                False       False
+20260204 confirmatory      DKVMN                       3              False      d1:DKVMN; d7:DKVMN                 True       False
+
+=== CORRECTED ===
+    seed         role comparator  comparator_within_rank  leg1_outside_top3             gap_leaders  leg2_first_all_gaps  divergence
+20260202  exploratory      DKVMN                       3              False      d1:DKVMN; d7:DKVMN                 True       False
+20260203  exploratory      DKVMN                       3              False d1:DKVMN; d7:PCDT-noPsi                False       False
+20260204 confirmatory      DKVMN                       3              False      d1:DKVMN; d7:DKVMN                 True       False
+
+==============================================================================
+RQ4 on ednet_flat:  archived NOT CONFIRMED (comparator DKVMN)  ->  corrected NOT CONFIRMED (comparator DKVMN)
+==============================================================================
+Verdict and comparator both unchanged: the finding survives the correction.
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__ednet_flat/tables: ['table11_primary_rule_archived', 'table11_primary_rule_corrected']
+
+==============================================================================
+RUN RQ4FIX__ednet_flat — complete
+  runtime        0.0 min
+  files written  6
+  inputs read    6 (0 missing)
+  isolation      OK — no finished run was modified
+  manifest       /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4FIX__ednet_flat/manifest.json
+==============================================================================

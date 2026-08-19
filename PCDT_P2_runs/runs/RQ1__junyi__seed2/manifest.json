@@ -1,0 +1,173 @@
+{
+  "run_id": "RQ1__junyi__seed2",
+  "description": "RQ1 construct-validity audit \u2014 Junyi Academy, seed 20260204",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-17 20:10:06",
+  "finished": "2026-08-17 20:11:14",
+  "runtime_minutes": 1.13,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__junyi__seed2",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": {
+    "dataset": "junyi",
+    "root": "/home/hamed/Downloads/Research/dataset",
+    "out_root": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs",
+    "max_learners": 20000,
+    "min_seq_len": 10,
+    "max_seq_len": 200,
+    "train_frac": 0.5,
+    "val_frac": 0.1,
+    "test_frac": 0.4,
+    "split_mode": "learner",
+    "param_budget": 350000,
+    "param_tolerance": 0.05,
+    "batch_size": 64,
+    "weight_decay": 1e-05,
+    "max_epochs": 30,
+    "patience": 5,
+    "grad_clip": 5.0,
+    "search_lrs": [
+      0.0005,
+      0.001,
+      0.002
+    ],
+    "use_persistence": true,
+    "dkvmn_legacy_lag": false,
+    "tau0_seconds": 3600.0,
+    "session_gap_s": 1200,
+    "reliability_floor": 0.6,
+    "convergent_floor": 0.3,
+    "simulator_recovery_floor": 0.5,
+    "min_meaningful_auc_delta": 0.01,
+    "warm_min_history": 5,
+    "min_learners_bucket": 300,
+    "min_points_bucket": 2000,
+    "utility_thresholds": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "n_bootstrap": 2000,
+    "ece_bins": 15,
+    "seeds": [
+      20260202,
+      20260203,
+      20260204
+    ],
+    "seed_index": 2,
+    "allow_fixture": false
+  },
+  "inputs": [],
+  "missing_inputs": [],
+  "n_outputs": 12,
+  "outputs": [
+    {
+      "path": "audited_subset_junyi.json",
+      "bytes": 2757,
+      "sha256": "e605209c8eec5e33fffcf6bce202137d194d89127f32c327de3fcf1c5182004b"
+    },
+    {
+      "path": "tables/table0_dataset_characteristics.csv",
+      "bytes": 258,
+      "sha256": "1e68392c143c18ff73b2f348708f8eb512f9109bff3a0e67f88eb2604fc936ee"
+    },
+    {
+      "path": "tables/table0_dataset_characteristics.tex",
+      "bytes": 427,
+      "sha256": "70666d7b88254bd3293b4812eb2200aef07cdbc416d5e447b7efeed1e9311323"
+    },
+    {
+      "path": "tables/table1_audit_junyi.csv",
+      "bytes": 1579,
+      "sha256": "77ecf2e29f5acb6ae791ff678f247c4e1c23e6eabfbca58866c3a9b2c0e64f24"
+    },
+    {
+      "path": "tables/table1_audit_junyi.tex",
+      "bytes": 1634,
+      "sha256": "9d8abfb4a967e7bce773cbf21b0e807481bd88c92ce0c0a8a2e15ae6b8895815"
+    },
+    {
+      "path": "tables/table1_convergent_matrix.csv",
+      "bytes": 239,
+      "sha256": "2a3891b4c8c25eee944c7cd69b6b50bbad5d1c1d04b0f29a94ec5aa995cb6951"
+    },
+    {
+      "path": "tables/table1_convergent_matrix.tex",
+      "bytes": 268,
+      "sha256": "0b7d1bab78842b00c658eccbf02185c5f11fc726b135944bf75fd15b453bd5a5"
+    },
+    {
+      "path": "tables/table1_verdict_matrix.csv",
+      "bytes": 161,
+      "sha256": "05b7ce09242edf555e47d5b02e69f126ca7e30395494cfab7252b18fb3f6a035"
+    },
+    {
+      "path": "tables/table1_verdict_matrix.tex",
+      "bytes": 266,
+      "sha256": "cf1ae53f32e8eddf309001f122ae5782074fa924a8b810ac761aea0edfa5c9f1"
+    },
+    {
+      "path": "figures/fig1_convergent_validity.pdf",
+      "bytes": 15870,
+      "sha256": "75e8d015d308485aa382d2fd7d93f6d38cef146fec14ec3b1ea5b6fe9178b04c"
+    },
+    {
+      "path": "figures/fig1_convergent_validity.png",
+      "bytes": 85046,
+      "sha256": "0fb743807a5fcf6256a36f7cedbde0006650d468b94d2be465a2c0932de0ff7c"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 5394,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "RQ1__junyi__seed1": 14
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ1",
+  "dataset": "junyi",
+  "seed": 20260204,
+  "seed_index": 2,
+  "dataset_stats": {
+    "junyi": {
+      "n_learners": 16844,
+      "n_interactions": 4408280,
+      "n_kc": 1326,
+      "n_items": 25358,
+      "correct_rate": 0.7028963565826416,
+      "median_span_days": 34.84895833333333,
+      "mean_span_days": 83.40812628631363
+    }
+  },
+  "audited_subset": [
+    "C_t",
+    "H_t",
+    "I_t"
+  ],
+  "data_paths": {
+    "log": "/home/hamed/Downloads/Research/dataset/junyi/Log_Problem.csv",
+    "content": "/home/hamed/Downloads/Research/dataset/junyi/Info_Content.csv"
+  }
+}

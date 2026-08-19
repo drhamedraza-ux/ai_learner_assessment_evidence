@@ -1,0 +1,4 @@
+seed,role,comparator,comparator_within_rank,leg1_outside_top3,gap_leaders,leg2_first_all_gaps,divergence
+20260202,exploratory,DKVMN,3,False,d1:DKVMN; d7:DKVMN,True,False
+20260203,exploratory,DKVMN,3,False,d1:DKVMN; d7:PCDT-noPsi,False,False
+20260204,confirmatory,DKVMN,3,False,d1:DKVMN; d7:DKVMN,True,False

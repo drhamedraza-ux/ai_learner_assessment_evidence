@@ -1,0 +1,4 @@
+(1) A learner counts toward a horizon if they have at least one inter-interaction gap reaching it; horizons are nested (>=4wk implies >=1wk implies >=1d).
+(2) Pre-registered adequacy threshold: >= 200 learners in the >=4-week column. This is a dataset-level screen; Table 5 additionally requires enough of those learners to fall in the held-out test split.
+(3) Datasets marked 'not scanned' are specified in the manuscript (Section 5.1) but their files were not present in this run. They must be scanned, or the manuscript's dataset list amended, before submission.
+(4) EdNet timestamps are milliseconds since epoch; the loader converts with unit='ms'. Confirm the median-span figure is plausible (weeks, not minutes) before trusting the >=4-week count.

@@ -1,0 +1,7 @@
+dimension,junyi
+I_t (identity),retain
+C_t (cognition),retain
+B_t (behaviour),reject
+M_t (metacognition),reject
+G_t (goals),reject
+H_t (historical memory),retain

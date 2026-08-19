@@ -1,0 +1,79 @@
+==============================================================================
+RUN RQ1__assistments_2021__seed2
+RQ1 construct-validity audit — ASSISTments 2020-21, seed 20260204
+started   2026-08-17 20:00:59   pid 706553
+writes to /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__assistments_2021__seed2
+reads     nothing — this notebook is a producer
+concurrent runs detected: RQ1__assistments_2021__seed1
+  (parallel execution is supported and expected — see RUN_ORDER.md)
+==============================================================================
+  data plogs     /home/hamed/Downloads/Research/dataset/feb_to_apr/plogs.csv
+  data details   /home/hamed/Downloads/Research/dataset/feb_to_apr/pdets.csv
+==============================================================================
+assistments_2021
+[assistments_2021] 15,325 learners | 1,135,067 interactions | 69,229 items | 394 skills | correct 0.669 | median span 48.9 d
+        behavioural signals present: ['response_time', 'hint_frac', 'attempt_count']
+  OK  15,325 learners | 1,135,067 interactions | 394 KCs
+      correct 0.669 | median span 48.9 d | mean span 45.6 d
+Table 0. Dataset characteristics for THIS SEED's learner sample.
+
+         dataset  learners  interactions  items  KCs  correct_rate  median_span_d  mean_span_d  pct_gap_ge_1wk  pct_gap_ge_4wk  pct_gap_ge_8wk  hint  attempt     seed  sampled_from_max_learners
+assistments_2021     15325       1135067  69229  394        0.6686          48.88        45.62            76.6            20.5             2.5  True     True 20260204                      20000
+
+These are not fixed properties of the datasets. Seeds 20260202/20260203/20260204 draw different samples, so learners, interactions, items, KCs and correct-rate all differ between them. Report Table 1 of the manuscript for the PRIMARY seed and say so, or report the three side by side — do not present one seed's counts as the dataset's. Cross-seed agreement elsewhere is correspondingly STRONGER than a split-only resampling would give, and is worth stating in those terms.
+assistments_2021   struggle-signal B_t: True | 15,006 learners with a split-half ability pair
+
+==============================================================================
+Table 1 — assistments_2021
+
+              dimension                                                                 proxy    alpha  split_half  convergent  sim_recovery verdict
+         I_t (identity)                                     split-half baseline-ability trait      n/a    0.839594    0.582151      0.582151  retain
+        C_t (cognition)                         running per-KC correctness (mastery estimate)      n/a    0.839594    0.725855           n/a  retain
+        B_t (behaviour)                                  hint+attempt+latency struggle signal 0.421161    0.220515   -0.100593           n/a  reject
+    M_t (metacognition)                   latency-accuracy coupling (prev_rt_z vs correction)      n/a    0.000000    0.223363      0.223363  reject
+            G_t (goals) curricular-progress fraction (no goal annotation in assistments_2021)      n/a    1.000000   -0.008131           n/a  reject
+H_t (historical memory) recency-weighted prior correctness; retained only if it adds OVER C_t      n/a    0.865766    0.912125      0.212004  retain
+  NOTE [I_t] CIRCULARITY WARNING: reliability is borrowed from C_proxy, and convergent validity is the SAME statistic as sim_recovery (corr(ability_h1, ability_h2)) -- i.e. I_t is validated against its own stability. Treat the 'retain' verdict as computational persistence of ability, NOT as an independently validated construct. See AUDIT_REPORT.md Finding 2
+  NOTE [M_t] split-half floored at 0: the two history halves correlate NEGATIVELY, so this is 'not internally consistent', not 'reliability measured as 0'
+  NOTE [G_t] reliability is 1.000 BY CONSTRUCTION: the proxy is a deterministic 0->1 ramp in sequence position, so its halves correlate perfectly. Read this as 'not a measurement', not as 'perfectly reliable'
+  NOTE [H_t] sim_recovery column holds INCREMENTAL validity over C_t, not simulator recovery
+Verdict by dimension — assistments_2021
+
+                        assistments_2021
+dimension                               
+I_t (identity)                    retain
+C_t (cognition)                   retain
+B_t (behaviour)                   reject
+M_t (metacognition)               reject
+G_t (goals)                       reject
+H_t (historical memory)           retain
+
+Convergent validity (r) — assistments_2021
+
+                         assistments_2021
+dimension                                
+I_t (identity)                      0.582
+C_t (cognition)                     0.726
+B_t (behaviour)                    -0.101
+M_t (metacognition)                 0.223
+G_t (goals)                        -0.008
+H_t (historical memory)             0.912
+
+retained: ['I_t (identity)', 'C_t (cognition)', 'H_t (historical memory)']
+rejected: ['B_t (behaviour)', 'M_t (metacognition)', 'G_t (goals)']
+
+Whether these verdicts agree ACROSS datasets and seeds is answered in SUMMARY__all, which reads every RQ1 run. It is deliberately not answered here: this notebook sees one dataset at one seed and must not imply otherwise.
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__assistments_2021__seed2/tables: ['table1_audit_assistments_2021']
+assistments_2021   retained=['I_t', 'C_t', 'H_t']  proxy_only=[]  -> model_dimensions=['C_t', 'H_t', 'I_t']
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__assistments_2021__seed2/tables: ['table0_dataset_characteristics', 'table1_convergent_matrix', 'table1_verdict_matrix']
+
+==============================================================================
+RUN RQ1__assistments_2021__seed2 — complete
+  runtime        0.52 min
+  files written  12
+  inputs read    0 (0 missing)
+  concurrent     RQ1__assistments_2021__seed1 (14 files)
+                 ran alongside this one and wrote only into its own folder — expected, not a problem
+  isolation      OK — no finished run was modified
+  manifest       /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__assistments_2021__seed2/manifest.json
+==============================================================================

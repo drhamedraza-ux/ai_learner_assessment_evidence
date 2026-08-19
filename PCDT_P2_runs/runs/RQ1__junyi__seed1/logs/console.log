@@ -1,0 +1,77 @@
+==============================================================================
+RUN RQ1__junyi__seed1
+RQ1 construct-validity audit — Junyi Academy, seed 20260203
+started   2026-08-17 20:09:25   pid 714945
+writes to /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__junyi__seed1
+reads     nothing — this notebook is a producer
+==============================================================================
+  data log       /home/hamed/Downloads/Research/dataset/junyi/Log_Problem.csv
+  data content   /home/hamed/Downloads/Research/dataset/junyi/Info_Content.csv
+==============================================================================
+junyi
+[junyi] 16,908 learners | 4,475,927 interactions | 25,337 items | 1,326 skills | correct 0.701 | median span 34.9 d
+        behavioural signals present: ['response_time', 'hint_frac', 'attempt_count']
+  OK  16,908 learners | 4,475,927 interactions | 1,326 KCs
+      correct 0.701 | median span 34.9 d | mean span 82.9 d
+Table 0. Dataset characteristics for THIS SEED's learner sample.
+
+dataset  learners  interactions  items  KCs  correct_rate  median_span_d  mean_span_d  pct_gap_ge_1wk  pct_gap_ge_4wk  pct_gap_ge_8wk  hint  attempt     seed  sampled_from_max_learners
+  junyi     16908       4475927  25337 1326        0.7008          34.86        82.92            60.6            38.8            22.4  True     True 20260203                      20000
+
+These are not fixed properties of the datasets. Seeds 20260202/20260203/20260204 draw different samples, so learners, interactions, items, KCs and correct-rate all differ between them. Report Table 1 of the manuscript for the PRIMARY seed and say so, or report the three side by side — do not present one seed's counts as the dataset's. Cross-seed agreement elsewhere is correspondingly STRONGER than a split-only resampling would give, and is worth stating in those terms.
+junyi              struggle-signal B_t: True | 16,908 learners with a split-half ability pair
+
+==============================================================================
+Table 1 — junyi
+
+              dimension                                                                 proxy    alpha  split_half  convergent  sim_recovery verdict
+         I_t (identity)                                     split-half baseline-ability trait      n/a    0.786206    0.632309      0.632309  retain
+        C_t (cognition)                         running per-KC correctness (mastery estimate)      n/a    0.786206    0.484043           n/a  retain
+        B_t (behaviour)                                  hint+attempt+latency struggle signal 0.468419    0.440602   -0.185090           n/a  reject
+    M_t (metacognition)                   latency-accuracy coupling (prev_rt_z vs correction)      n/a    0.000000    0.186042      0.186042  reject
+            G_t (goals)            curricular-progress fraction (no goal annotation in junyi)      n/a    1.000000   -0.026316           n/a  reject
+H_t (historical memory) recency-weighted prior correctness; retained only if it adds OVER C_t      n/a    0.855991    0.799898      0.189711  retain
+  NOTE [I_t] CIRCULARITY WARNING: reliability is borrowed from C_proxy, and convergent validity is the SAME statistic as sim_recovery (corr(ability_h1, ability_h2)) -- i.e. I_t is validated against its own stability. Treat the 'retain' verdict as computational persistence of ability, NOT as an independently validated construct. See AUDIT_REPORT.md Finding 2
+  NOTE [M_t] split-half floored at 0: the two history halves correlate NEGATIVELY, so this is 'not internally consistent', not 'reliability measured as 0'
+  NOTE [G_t] reliability is 1.000 BY CONSTRUCTION: the proxy is a deterministic 0->1 ramp in sequence position, so its halves correlate perfectly. Read this as 'not a measurement', not as 'perfectly reliable'
+  NOTE [H_t] sim_recovery column holds INCREMENTAL validity over C_t, not simulator recovery
+Verdict by dimension — junyi
+
+                          junyi
+dimension                      
+I_t (identity)           retain
+C_t (cognition)          retain
+B_t (behaviour)          reject
+M_t (metacognition)      reject
+G_t (goals)              reject
+H_t (historical memory)  retain
+
+Convergent validity (r) — junyi
+
+                         junyi
+dimension                     
+I_t (identity)           0.632
+C_t (cognition)          0.484
+B_t (behaviour)         -0.185
+M_t (metacognition)      0.186
+G_t (goals)             -0.026
+H_t (historical memory)  0.800
+
+retained: ['I_t (identity)', 'C_t (cognition)', 'H_t (historical memory)']
+rejected: ['B_t (behaviour)', 'M_t (metacognition)', 'G_t (goals)']
+
+Whether these verdicts agree ACROSS datasets and seeds is answered in SUMMARY__all, which reads every RQ1 run. It is deliberately not answered here: this notebook sees one dataset at one seed and must not imply otherwise.
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__junyi__seed1/tables: ['table1_audit_junyi']
+junyi              retained=['I_t', 'C_t', 'H_t']  proxy_only=[]  -> model_dimensions=['C_t', 'H_t', 'I_t']
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__junyi__seed1/tables: ['table0_dataset_characteristics', 'table1_convergent_matrix', 'table1_verdict_matrix']
+
+==============================================================================
+RUN RQ1__junyi__seed1 — complete
+  runtime        1.13 min
+  files written  12
+  inputs read    0 (0 missing)
+  concurrent     RQ1__junyi__seed2 (2 files)
+                 ran alongside this one and wrote only into its own folder — expected, not a problem
+  isolation      OK — no finished run was modified
+  manifest       /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__junyi__seed1/manifest.json
+==============================================================================

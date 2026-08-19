@@ -1,0 +1,2 @@
+dataset,learners,interactions,items,KCs,correct_rate,median_span_d,mean_span_d,pct_gap_ge_1wk,pct_gap_ge_4wk,pct_gap_ge_8wk,hint,attempt,seed,sampled_from_max_learners
+junyi,16908,4475927,25337,1326,0.7008,34.86,82.92,60.6,38.8,22.4,True,True,20260203,20000

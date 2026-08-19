@@ -1,0 +1,130 @@
+==============================================================================
+RUN RQ4__ednet_flat
+RQ4 ranking divergence — EdNet-KT1, 3 seeds
+started   2026-08-18 13:25:49   pid 14679
+writes to /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4__ednet_flat
+reads     RQ2RQ3__ednet_flat__seed0, RQ2RQ3__ednet_flat__seed1, RQ2RQ3__ednet_flat__seed2
+concurrent runs detected: RQ2RQ3__junyi__seed0, RQ2RQ3__junyi__seed1, RQ2RQ3__junyi__seed2
+  (parallel execution is supported and expected — see RUN_ORDER.md)
+==============================================================================
+
+run roles (fixed before any result is read):
+  s1  seed=20260202  exploratory   RQ2RQ3__ednet_flat__seed0
+  s2  seed=20260203  exploratory   RQ2RQ3__ednet_flat__seed1
+  s3  seed=20260204  CONFIRMATORY  RQ2RQ3__ednet_flat__seed2
+  read input     RQ2RQ3__ednet_flat__seed0/table9
+  read input     RQ2RQ3__ednet_flat__seed0/predictions
+  s1: table9 loaded (8 models)
+  read input     RQ2RQ3__ednet_flat__seed1/table9
+  read input     RQ2RQ3__ednet_flat__seed1/predictions
+  s2: table9 loaded (8 models)
+  read input     RQ2RQ3__ednet_flat__seed2/table9
+  read input     RQ2RQ3__ednet_flat__seed2/predictions
+  s3: table9 loaded (8 models)
+
+--- s1 (exploratory, seed 20260202) ---
+  top within session : PCDT-noPsi
+  gap leaders        : {'d1': 'DKVMN', 'd7': 'DKVMN'}
+     model  auc_within  rank_within  auc_mean_postgap  rank_mean_postgap
+PCDT-noPsi      0.7163          1.0            0.6487                2.0
+      PCDT      0.7155          2.0            0.6412                5.0
+     DKVMN      0.7144          3.0            0.6493                1.0
+       DKT      0.7129          4.0            0.6417                4.0
+     DKT-F      0.7128          5.0            0.6345                6.0
+      SAKT      0.7087          6.0            0.6425                3.0
+   Control      0.7076          7.0            0.6257                7.0
+       AKT      0.6937          8.0            0.6096                8.0
+
+--- s2 (exploratory, seed 20260203) ---
+  top within session : PCDT-noPsi
+  gap leaders        : {'d1': 'DKVMN', 'd7': 'PCDT-noPsi'}
+     model  auc_within  rank_within  auc_mean_postgap  rank_mean_postgap
+PCDT-noPsi      0.7159          1.0            0.6459                1.0
+      PCDT      0.7147          2.0            0.6414                4.0
+     DKVMN      0.7140          3.0            0.6430                3.0
+     DKT-F      0.7127          4.0            0.6352                5.0
+       DKT      0.7115          5.0            0.6322                6.0
+      SAKT      0.7084          6.0            0.6446                2.0
+   Control      0.7070          7.0            0.6259                7.0
+       AKT      0.6927          8.0            0.6038                8.0
+
+--- s3 (CONFIRMATORY, seed 20260204) ---
+  top within session : PCDT-noPsi
+  gap leaders        : {'d1': 'DKVMN', 'd7': 'DKVMN'}
+     model  auc_within  rank_within  auc_mean_postgap  rank_mean_postgap
+PCDT-noPsi      0.7164          1.0            0.6307                2.0
+      PCDT      0.7151          2.0            0.6264                6.0
+     DKVMN      0.7144          3.0            0.6378                1.0
+       DKT      0.7130          4.0            0.6290                4.0
+     DKT-F      0.7128          5.0            0.6274                5.0
+      SAKT      0.7084          6.0            0.6306                3.0
+   Control      0.7074          7.0            0.6190                7.0
+       AKT      0.6908          8.0            0.5985                8.0
+comparator named from the CONFIRMATORY seed: DKVMN
+adequate real horizons on s3: ['d1', 'd7']
+
+seed         role  n_models comparator  comparator_within_rank  leg1_outside_top3             gap_leaders  leg2_first_all_gaps  divergence
+  s1  exploratory         8      DKVMN                       3              False      d1:DKVMN; d7:DKVMN                 True       False
+  s2  exploratory         8      DKVMN                       3              False d1:DKVMN; d7:PCDT-noPsi                False       False
+  s3 CONFIRMATORY         8      DKVMN                       3              False      d1:DKVMN; d7:DKVMN                 True       False
+
+PRIMARY RULE on the confirmatory seed: NOT CONFIRMED — leg1: comparator ranks inside the top 3 within session
+comparator named from exploratory seeds : PCDT-noPsi
+comparator named from confirmatory seed : DKVMN
+rule on s3 with the exploratory comparator: NOT CONFIRMED (leg1=False, leg2=False, within rank=1)
+Verdict agrees, but the two procedures name different comparators — state which model the claim is about.
+seed         role   comparison bucket      n   delta   ci_lo   ci_hi   sig
+  s1  exploratory PCDT - DKVMN within 466914  0.0012  0.0005  0.0019  True
+  s1  exploratory PCDT - DKVMN     d1   8859 -0.0070 -0.0139  0.0001 False
+  s1  exploratory PCDT - DKVMN     d7   2323 -0.0092 -0.0221  0.0031 False
+  s2  exploratory PCDT - DKVMN within 469905  0.0007 -0.0001  0.0015 False
+  s2  exploratory PCDT - DKVMN     d1   8847 -0.0087 -0.0162 -0.0006  True
+  s2  exploratory PCDT - DKVMN     d7   2283  0.0053 -0.0092  0.0198 False
+  s3 CONFIRMATORY PCDT - DKVMN within 470863  0.0007 -0.0002  0.0015 False
+  s3 CONFIRMATORY PCDT - DKVMN     d1   8762 -0.0115 -0.0191 -0.0036  True
+  s3 CONFIRMATORY PCDT - DKVMN     d7   2299 -0.0114 -0.0257  0.0035 False
+
+sign flip by seed: {
+  "s1": {
+    "within_positive_sig": true,
+    "any_gap_negative_sig": false,
+    "sign_flip": false
+  },
+  "s2": {
+    "within_positive_sig": false,
+    "any_gap_negative_sig": true,
+    "sign_flip": false
+  },
+  "s3": {
+    "within_positive_sig": false,
+    "any_gap_negative_sig": true,
+    "sign_flip": false
+  }
+}
+==============================================================================
+RQ4 VERDICT: NOT CONFIRMED on the out-of-sample seed 20260204
+==============================================================================
+  primary rule   : failed — leg1: comparator ranks inside the top 3 within session
+  secondary rule : not passed
+  comparator     : DKVMN
+
+  QUALIFICATIONS (report these with the finding):
+   1. Within-session |delta| vs the MMDE (0.01): BELOW. So this is a MODEL-SELECTION result, not a claim that one model is meaningfully better within session.
+   3. Demonstrated on one dataset. Say so.
+   4. Disclose that the FIRST pre-registered rule failed and was re-specified BEFORE the confirmatory seed was run.
+
+  A result that does not depend on the authors' own model is worth reporting: if any pair of PUBLISHED baselines shows the same reversal, the point stands without reference to the proposed representation at all.
+     among baselines + Control only: best within = DKVMN, best across gaps = DKVMN
+tables -> /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4__ednet_flat/tables: ['table10_rankings_by_seed', 'table11_primary_rule_by_seed', 'table12_secondary_magnitude', 'table13_selection_sensitivity']
+wrote /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4__ednet_flat/verdict_rq4.json
+
+==============================================================================
+RUN RQ4__ednet_flat — complete
+  runtime        10.5 min
+  files written  10
+  inputs read    6 (0 missing)
+  concurrent     RQ2RQ3__junyi__seed0 (1 files), RQ2RQ3__junyi__seed1 (1 files)
+                 ran alongside this one and wrote only into its own folder — expected, not a problem
+  isolation      OK — no finished run was modified
+  manifest       /home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ4__ednet_flat/manifest.json
+==============================================================================

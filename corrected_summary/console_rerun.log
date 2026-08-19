@@ -1,0 +1,171 @@
+==============================================================================
+RUN SUMMARY__all
+Cross-run summary — RQ1-RQ4, 3 datasets, 3 seeds
+started   2026-08-16 01:23:26   pid 683
+writes to /home/claude/work/rerun/PCDT_P2_runs/runs/SUMMARY__all
+reads     all RQ1, RQ2RQ3 and RQ4 run folders
+==============================================================================
+
+minimum meaningful AUC difference (pre-registered): 0.01
+primary seed: 20260202
+  kind                          run_id          dataset       seed  present   status  files  minutes  isolation_ok  fixture
+   RQ1    RQ1__assistments_2021__seed0 assistments_2021 20260202.0     True complete     12     0.39          True    False
+   RQ1    RQ1__assistments_2021__seed1 assistments_2021 20260203.0     True complete     12     0.37          True    False
+   RQ1    RQ1__assistments_2021__seed2 assistments_2021 20260204.0     True complete     12     0.37          True    False
+   RQ1          RQ1__ednet_flat__seed0       ednet_flat 20260202.0     True complete     12     0.43          True    False
+   RQ1          RQ1__ednet_flat__seed1       ednet_flat 20260203.0     True complete     12     0.45          True    False
+   RQ1          RQ1__ednet_flat__seed2       ednet_flat 20260204.0     True complete     12     0.45          True    False
+   RQ1               RQ1__junyi__seed0            junyi 20260202.0     True complete     12     1.10          True    False
+   RQ1               RQ1__junyi__seed1            junyi 20260203.0     True complete     12     1.10          True    False
+   RQ1               RQ1__junyi__seed2            junyi 20260204.0     True complete     12     1.08          True    False
+RQ2RQ3 RQ2RQ3__assistments_2021__seed0 assistments_2021 20260202.0     True complete     32   134.70          True    False
+RQ2RQ3 RQ2RQ3__assistments_2021__seed1 assistments_2021 20260203.0     True complete     32   133.56          True    False
+RQ2RQ3 RQ2RQ3__assistments_2021__seed2 assistments_2021 20260204.0     True complete     32   136.13          True    False
+RQ2RQ3       RQ2RQ3__ednet_flat__seed0       ednet_flat 20260202.0     True complete     32   148.93          True    False
+RQ2RQ3       RQ2RQ3__ednet_flat__seed1       ednet_flat 20260203.0     True complete     32   149.18          True    False
+RQ2RQ3       RQ2RQ3__ednet_flat__seed2       ednet_flat 20260204.0     True complete     32   154.68          True    False
+RQ2RQ3            RQ2RQ3__junyi__seed0            junyi 20260202.0     True complete     32   160.93          True    False
+RQ2RQ3            RQ2RQ3__junyi__seed1            junyi 20260203.0     True complete     32   160.67          True    False
+RQ2RQ3            RQ2RQ3__junyi__seed2            junyi 20260204.0     True complete     32   158.74          True    False
+   RQ4           RQ4__assistments_2021 assistments_2021        NaN     True complete      8     7.22          True    False
+   RQ4                 RQ4__ednet_flat       ednet_flat        NaN     True complete      8    10.11          True    False
+   RQ4                      RQ4__junyi            junyi        NaN     True complete      8    14.40          True    False
+  read input     RQ1__assistments_2021__seed0/table1
+  read input     RQ1__assistments_2021__seed1/table1
+  read input     RQ1__assistments_2021__seed2/table1
+  read input     RQ1__ednet_flat__seed0/table1
+  read input     RQ1__ednet_flat__seed1/table1
+  read input     RQ1__ednet_flat__seed2/table1
+  read input     RQ1__junyi__seed0/table1
+  read input     RQ1__junyi__seed1/table1
+  read input     RQ1__junyi__seed2/table1
+Verdict by dimension x dataset x seed
+
+dataset                 assistments_2021                   ednet_flat                      junyi                  
+seed                            20260202 20260203 20260204   20260202 20260203 20260204 20260202 20260203 20260204
+dimension                                                                                                         
+B_t (behaviour)                   reject   reject   reject     reject   reject   reject   reject   reject   reject
+C_t (cognition)                   retain   retain   retain     retain   retain   retain   retain   retain   retain
+G_t (goals)                       reject   reject   reject     reject   reject   reject   reject   reject   reject
+H_t (historical memory)           retain   retain   retain     retain   retain   retain   retain   retain   retain
+I_t (identity)                    retain   retain   retain     retain   retain   retain   retain   retain   retain
+M_t (metacognition)               reject   reject   reject     reject   reject   reject   reject   reject   reject
+
+A. Verdicts that CHANGE ACROSS SEEDS within a dataset:
+   none — the audit is seed-stable
+
+B. On the PRIMARY seed, verdict by dataset:
+
+dataset                 assistments_2021 ednet_flat   junyi
+dimension                                                  
+B_t (behaviour)                   reject     reject  reject
+C_t (cognition)                   retain     retain  retain
+G_t (goals)                       reject     reject  reject
+H_t (historical memory)           retain     retain  retain
+I_t (identity)                    retain     retain  retain
+M_t (metacognition)               reject     reject  reject
+
+   identical on every dataset : ['B_t (behaviour)', 'C_t (cognition)', 'G_t (goals)', 'H_t (historical memory)', 'I_t (identity)', 'M_t (metacognition)']
+   varies by dataset          : []
+  read input     RQ2RQ3__assistments_2021__seed0/table2
+  read input     RQ2RQ3__assistments_2021__seed1/table2
+  read input     RQ2RQ3__assistments_2021__seed2/table2
+  read input     RQ2RQ3__ednet_flat__seed0/table2
+  read input     RQ2RQ3__ednet_flat__seed1/table2
+  read input     RQ2RQ3__ednet_flat__seed2/table2
+  read input     RQ2RQ3__junyi__seed0/table2
+  read input     RQ2RQ3__junyi__seed1/table2
+  read input     RQ2RQ3__junyi__seed2/table2
+         dataset     seed  primary  pcdt_auc strongest  baseline_auc   delta                 verdict
+assistments_2021 20260202     True    0.7506     DKT-F        0.7493  0.0013 equivalent (below MMDE)
+assistments_2021 20260203    False    0.7505     DKT-F        0.7494  0.0011 equivalent (below MMDE)
+assistments_2021 20260204    False    0.7493     DKT-F        0.7504 -0.0011 equivalent (below MMDE)
+      ednet_flat 20260202     True    0.7117       DKT        0.7092  0.0025 equivalent (below MMDE)
+      ednet_flat 20260203    False    0.7107     DKT-F        0.7089  0.0018 equivalent (below MMDE)
+      ednet_flat 20260204    False    0.7111       DKT        0.7091  0.0020 equivalent (below MMDE)
+           junyi 20260202     True    0.7508     DKVMN        0.7422  0.0086 equivalent (below MMDE)
+           junyi 20260203    False    0.7476     DKVMN        0.7398  0.0079 equivalent (below MMDE)
+           junyi 20260204    False    0.7505     DKVMN        0.7424  0.0080 equivalent (below MMDE)
+
+==============================================================================
+PRIMARY SEED — this is what RQ2 is reported on
+==============================================================================
+         dataset  pcdt_auc strongest  baseline_auc  delta                 verdict
+assistments_2021    0.7506     DKT-F        0.7493 0.0013 equivalent (below MMDE)
+      ednet_flat    0.7117       DKT        0.7092 0.0025 equivalent (below MMDE)
+           junyi    0.7508     DKVMN        0.7422 0.0086 equivalent (below MMDE)
+
+Stability across seeds:
+  assistments_2021   delta +0.0004 +/- 0.0011 over 3 seed(s)   STABLE
+  ednet_flat         delta +0.0021 +/- 0.0003 over 3 seed(s)   STABLE
+      note: the strongest baseline is not the same model in every seed: {20260202: 'DKT', 20260203: 'DKT-F', 20260204: 'DKT'}
+  junyi              delta +0.0082 +/- 0.0003 over 3 seed(s)   STABLE
+  read input     RQ2RQ3__assistments_2021__seed0/table5
+  read input     RQ2RQ3__assistments_2021__seed1/table5
+  read input     RQ2RQ3__assistments_2021__seed2/table5
+  read input     RQ2RQ3__ednet_flat__seed0/table5
+  read input     RQ2RQ3__ednet_flat__seed1/table5
+  read input     RQ2RQ3__ednet_flat__seed2/table5
+  read input     RQ2RQ3__junyi__seed0/table5
+  read input     RQ2RQ3__junyi__seed1/table5
+  read input     RQ2RQ3__junyi__seed2/table5
+PRIMARY SEED — adequate horizons only
+
+         dataset horizon comparator  advantage   ci_lo   ci_hi                          sig
+assistments_2021      d1    Control     0.0195  0.0168  0.0222                     positive
+assistments_2021      d7    Control     0.0211  0.0168  0.0252                     positive
+assistments_2021      d1      DKT-F    -0.0087 -0.0125 -0.0051                     negative
+assistments_2021      d7      DKT-F    -0.0092 -0.0155 -0.0027                     negative
+      ednet_flat      d1    Control     0.0061  0.0011  0.0110                     positive
+      ednet_flat      d7    Control     0.0089  0.0009  0.0173                     positive
+      ednet_flat      d1      DKT-F     0.0045 -0.0012  0.0100 inconclusive (CI spans zero)
+      ednet_flat      d7      DKT-F     0.0034 -0.0071  0.0133 inconclusive (CI spans zero)
+      ednet_flat      d1        DKT     0.0005 -0.0050  0.0058 inconclusive (CI spans zero)
+      ednet_flat      d7        DKT    -0.0069 -0.0166  0.0025 inconclusive (CI spans zero)
+           junyi      d1    Control     0.0109  0.0083  0.0134                     positive
+           junyi      d7    Control     0.0077  0.0037  0.0116                     positive
+           junyi     d28    Control     0.0042 -0.0009  0.0095 inconclusive (CI spans zero)
+           junyi      d1      DKT-F     0.0035 -0.0014  0.0085 inconclusive (CI spans zero)
+           junyi      d7      DKT-F     0.0062 -0.0015  0.0139 inconclusive (CI spans zero)
+           junyi     d28      DKT-F     0.0125  0.0009  0.0239                     positive
+           junyi      d1      DKVMN    -0.0128 -0.0162 -0.0094                     negative
+           junyi      d7      DKVMN    -0.0198 -0.0253 -0.0143                     negative
+           junyi     d28      DKVMN    -0.0192 -0.0270 -0.0110                     negative
+
+==============================================================================
+CROSS-SEED STABILITY of each (dataset, horizon, comparator) cell
+==============================================================================
+         dataset horizon comparator                                                                                        verdicts  spread
+assistments_2021      d7      DKT-F                     20260202:negative; 20260203:negative; 20260204:inconclusive (CI spans zero)  0.0069
+      ednet_flat      d1    Control                     20260202:positive; 20260203:positive; 20260204:inconclusive (CI spans zero)  0.0039
+      ednet_flat      d7    Control                     20260202:positive; 20260203:positive; 20260204:inconclusive (CI spans zero)  0.0124
+      ednet_flat      d7        DKT                                        20260202:inconclusive (CI spans zero); 20260204:negative  0.0042
+           junyi      d1      DKT-F 20260202:inconclusive (CI spans zero); 20260203:positive; 20260204:inconclusive (CI spans zero)  0.0028
+           junyi     d28    Control                     20260202:inconclusive (CI spans zero); 20260203:positive; 20260204:positive  0.0056
+           junyi     d28      DKT-F                     20260202:positive; 20260203:inconclusive (CI spans zero); 20260204:positive  0.0134
+           junyi      d7      DKT-F 20260202:inconclusive (CI spans zero); 20260203:positive; 20260204:inconclusive (CI spans zero)  0.0028
+
+*** These cells do not replicate across seeds. Report them as unstable, not as the primary seed's verdict. ***
+  read input     RQ4__assistments_2021/verdict
+  read input     RQ4__ednet_flat/verdict
+  read input     RQ4__junyi/verdict
+         dataset   status comparator     confirmed  secondary horizons_used                                            failing_leg
+assistments_2021 complete PCDT-noPsi NOT CONFIRMED not passed        d1, d7 leg1: comparator ranks inside the top 3 within session
+      ednet_flat complete      DKVMN     CONFIRMED     passed        d1, d7                                                   none
+           junyi complete      DKVMN     CONFIRMED     passed   d1, d7, d28                                                   none
+
+Divergence confirmed on 2 of 3 dataset(s) tested.
+*** The effect is DATASET-DEPENDENT. A claim about the field's default evaluation protocol cannot rest on the subset where it replicated — report the datasets where it did not. ***
+
+d28 is below the adequacy floor on ASSISTments and EdNet, so leg 2 of the rule was tested on d1 and d7 only there. State the horizons used alongside each verdict.
+tables -> /home/claude/work/rerun/PCDT_P2_runs/runs/SUMMARY__all/tables: ['summary_inventory', 'summary_rq1_verdicts', 'summary_rq2_cross_seed', 'summary_rq3_cross_seed', 'summary_rq4_by_dataset']
+wrote 5 table(s) -> /home/claude/work/rerun/PCDT_P2_runs/runs/SUMMARY__all/tables
+
+==============================================================================
+RUN SUMMARY__all — complete
+  runtime        0.01 min
+  files written  11
+  inputs read    30 (0 missing)
+  isolation      OK — no finished run was modified
+  manifest       /home/claude/work/rerun/PCDT_P2_runs/runs/SUMMARY__all/manifest.json
+==============================================================================

@@ -1,0 +1,264 @@
+{
+  "run_id": "RQ2RQ3__ednet_flat__seed0",
+  "description": "RQ2 + RQ3 \u2014 EdNet-KT1, seed 20260202",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-18 10:45:43",
+  "finished": "2026-08-18 12:25:06",
+  "runtime_minutes": 99.38,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ2RQ3__ednet_flat__seed0",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": {
+    "dataset": "ednet_flat",
+    "root": "/home/hamed/Downloads/Research/dataset",
+    "out_root": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs",
+    "max_learners": 20000,
+    "min_seq_len": 10,
+    "max_seq_len": 200,
+    "train_frac": 0.5,
+    "val_frac": 0.1,
+    "test_frac": 0.4,
+    "split_mode": "learner",
+    "param_budget": 350000,
+    "param_tolerance": 0.05,
+    "batch_size": 64,
+    "weight_decay": 1e-05,
+    "max_epochs": 30,
+    "patience": 5,
+    "grad_clip": 5.0,
+    "search_lrs": [
+      0.0005,
+      0.001,
+      0.002
+    ],
+    "use_persistence": true,
+    "dkvmn_legacy_lag": false,
+    "tau0_seconds": 3600.0,
+    "session_gap_s": 1200,
+    "reliability_floor": 0.6,
+    "convergent_floor": 0.3,
+    "simulator_recovery_floor": 0.5,
+    "min_meaningful_auc_delta": 0.01,
+    "warm_min_history": 5,
+    "min_learners_bucket": 300,
+    "min_points_bucket": 2000,
+    "utility_thresholds": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "n_bootstrap": 2000,
+    "ece_bins": 15,
+    "seeds": [
+      20260202,
+      20260203,
+      20260204
+    ],
+    "seed_index": 0,
+    "allow_fixture": false
+  },
+  "inputs": [],
+  "missing_inputs": [],
+  "n_outputs": 32,
+  "outputs": [
+    {
+      "path": "artifacts/model_AKT.pt",
+      "bytes": 1410270,
+      "sha256": "d8848420b1d7332b4ddd91b20aec792d0eeffac3c931835576e10d1c66b6fc82"
+    },
+    {
+      "path": "artifacts/model_Control.pt",
+      "bytes": 1398510,
+      "sha256": "e258ed1dd8c948c86ebd4164dc37712ce283e45efd6b8fd44a175f29492b2151"
+    },
+    {
+      "path": "artifacts/model_DKT-F.pt",
+      "bytes": 1401413,
+      "sha256": "b640ca46b63730c11ab5f99ebc7daccf702ada538ceff1fb138e80928dbbb699"
+    },
+    {
+      "path": "artifacts/model_DKT.pt",
+      "bytes": 1409009,
+      "sha256": "c6171ba2ad8c746a01e71786e1b2ff5901c044737af83124dcdb6dbe8e4ea61b"
+    },
+    {
+      "path": "artifacts/model_DKVMN.pt",
+      "bytes": 1404551,
+      "sha256": "b920dc19a672100ba3e6acf52676c28a72e364a7463e30f4651c7c9fd63bd037"
+    },
+    {
+      "path": "artifacts/model_PCDT-noPsi.pt",
+      "bytes": 1398567,
+      "sha256": "954b73f8e7598e47ec154f816e534146b359400d588ff0ba306c5c9f17aef71c"
+    },
+    {
+      "path": "artifacts/model_PCDT.pt",
+      "bytes": 1398261,
+      "sha256": "76c5dc78f66cfafb0a730b1dabf9848611b0ac0d1f5e6e2e2f344e14ecc4b5b9"
+    },
+    {
+      "path": "artifacts/model_SAKT.pt",
+      "bytes": 1394357,
+      "sha256": "56ec381b4650a2249fb58a0fc773cc3836ae4fbcbe42659f31fede33e12de4b6"
+    },
+    {
+      "path": "artifacts/predictions_test.npz",
+      "bytes": 29824590,
+      "sha256": "37b1696c4f929f9b833eb7f40f7882d2b88ee8c45f06b3f1ba2db48af5978434"
+    },
+    {
+      "path": "tables/table0_temporal_profile.csv",
+      "bytes": 663,
+      "sha256": "955293b76be5f26a6451d5ec08399526d42525941021de8f4423cac551114437"
+    },
+    {
+      "path": "tables/table0_temporal_profile.tex",
+      "bytes": 655,
+      "sha256": "eac6f6e635a31c99f7a26d0fb8830d018ef35f86ec9c03d16fdadb8eb149404e"
+    },
+    {
+      "path": "tables/table1_bucket_counts.csv",
+      "bytes": 137,
+      "sha256": "6943815ebb4cfc005d19404ad6aaa58c5e94ba34ba2f21cd28092026ca5e4331"
+    },
+    {
+      "path": "tables/table1_bucket_counts.tex",
+      "bytes": 257,
+      "sha256": "29f1b22c0357fe8be63492446bcc26c3e03dec9310333452d2719ec9a991a16d"
+    },
+    {
+      "path": "tables/table2_predictive.csv",
+      "bytes": 1285,
+      "sha256": "011132f9f0546f88179f28316d9315974674b5e49fbcdaab9f38a1786cd269c9"
+    },
+    {
+      "path": "tables/table2_predictive.tex",
+      "bytes": 994,
+      "sha256": "058f7a3cb2cfcac81b573360eece959f57db97724477bba49d07bc294d8f6a34"
+    },
+    {
+      "path": "tables/table3_statistics.csv",
+      "bytes": 925,
+      "sha256": "7a07f00b7aa1106255cb57ae7512fd2eea7e3c4315c30b4c8704aba76fd430f2"
+    },
+    {
+      "path": "tables/table3_statistics.tex",
+      "bytes": 877,
+      "sha256": "298af5b9c8997dc2f4779e3539e685ab9c367db8cda0f6d01ae9fde4c49f7896"
+    },
+    {
+      "path": "tables/table5_persistence.csv",
+      "bytes": 1034,
+      "sha256": "0bba1e29423d663dab9b4ee0e4652d79d75f2d3061db5fa0d6469fe382e134eb"
+    },
+    {
+      "path": "tables/table5_persistence.tex",
+      "bytes": 990,
+      "sha256": "c71d4d66c2e8485f063ddcb7a1739315749d33e052812e662ccdf678679844d8"
+    },
+    {
+      "path": "tables/table6_educational_utility.csv",
+      "bytes": 5979,
+      "sha256": "7c94c8ac10010d9483e49ee25861aed7dc3cda450de0ee567d2354aa738f7be1"
+    },
+    {
+      "path": "tables/table6_educational_utility.tex",
+      "bytes": 5064,
+      "sha256": "8caac3893064fb6c3b3c8c2666f18522cb99448cf0e0ed280a6a55d2891ff9f8"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.csv",
+      "bytes": 462,
+      "sha256": "93878e1e5b0bf7d40d2034f8cb0ca819787d60a1fae5e5a7a12fe2a1771b11d9"
+    },
+    {
+      "path": "tables/table7_ablation_persistence.tex",
+      "bytes": 432,
+      "sha256": "15d212332c4a85a1ee9c43e5bf211fa4b3c5bde3b9d6c163e3cc576d78f96a9e"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.csv",
+      "bytes": 1233,
+      "sha256": "0e33e1f846054bff026d6105ff8764ce578430786746cf8ac380be2638e534ff"
+    },
+    {
+      "path": "tables/table9_postgap_auc_by_model.tex",
+      "bytes": 1182,
+      "sha256": "3cc24d61551f5d6e557adb143294f86b4dc287ad94a1189c2994f15997bd95c1"
+    },
+    {
+      "path": "figures/fig_retention.pdf",
+      "bytes": 18208,
+      "sha256": "bd09cf0362e6344d0d1fb66b1b744f17dcd2db2d5fc0b3105b5f5034a81b4b04"
+    },
+    {
+      "path": "figures/fig_retention.png",
+      "bytes": 94612,
+      "sha256": "ffd23d7ffd90b1a67f75312d8e985cba19d1931d8b6a294e9b021b20607f8592"
+    },
+    {
+      "path": "figures/fig_roc_all_models.pdf",
+      "bytes": 118758,
+      "sha256": "d123094d9b4ac065960e2ec014df51d6024a0d1cacbbe465dae2947e629fd073"
+    },
+    {
+      "path": "figures/fig_roc_all_models.png",
+      "bytes": 161140,
+      "sha256": "44939d8d7f52472920c185ddf7c37032ce1f4b6c3be5a75f2c9f196552ba6f4b"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap.pdf",
+      "bytes": 16894,
+      "sha256": "5b1908bc235919c70bb8e695b957d2bb0bc3af540f7540046198cbd5966a028f"
+    },
+    {
+      "path": "figures/fig_within_vs_postgap.png",
+      "bytes": 105932,
+      "sha256": "621d91bd183395404b22bf8a85e69171edb415cc153b394c3fa3407d523531dd"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 18998,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "RQ2RQ3__ednet_flat__seed1": 11,
+    "RQ2RQ3__ednet_flat__seed2": 11
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ2+RQ3",
+  "dataset": "ednet_flat",
+  "seed": 20260202,
+  "seed_index": 0,
+  "n_learners": 15324,
+  "strongest_baseline": "DKVMN",
+  "horizons_real": [
+    "d1",
+    "d7",
+    "d28"
+  ],
+  "data_paths": {
+    "flat": "/home/hamed/Downloads/Research/dataset/EdNet/ednet_kt1_flat.csv"
+  }
+}

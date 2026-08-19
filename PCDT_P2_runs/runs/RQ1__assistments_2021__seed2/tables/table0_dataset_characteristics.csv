@@ -1,0 +1,2 @@
+dataset,learners,interactions,items,KCs,correct_rate,median_span_d,mean_span_d,pct_gap_ge_1wk,pct_gap_ge_4wk,pct_gap_ge_8wk,hint,attempt,seed,sampled_from_max_learners
+assistments_2021,15325,1135067,69229,394,0.6686,48.88,45.62,76.6,20.5,2.5,True,True,20260204,20000

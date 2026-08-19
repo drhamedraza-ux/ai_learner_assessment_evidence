@@ -1,0 +1,2 @@
+dataset,learners,interactions,items,KCs,correct_rate,median_span_d,mean_span_d,pct_gap_ge_1wk,pct_gap_ge_4wk,pct_gap_ge_8wk,hint,attempt,seed,sampled_from_max_learners
+ednet_flat,15324,4934433,11857,142,0.6686,1.17,68.26,37.5,24.1,18.2,False,False,20260202,20000

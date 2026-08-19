@@ -1,0 +1,172 @@
+{
+  "run_id": "RQ1__ednet_flat__seed2",
+  "description": "RQ1 construct-validity audit \u2014 EdNet-KT1, seed 20260204",
+  "status": "complete",
+  "notes": "",
+  "fixture": false,
+  "started": "2026-08-17 20:07:24",
+  "finished": "2026-08-17 20:07:56",
+  "runtime_minutes": 0.53,
+  "output_dir": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs/runs/RQ1__ednet_flat__seed2",
+  "environment": {
+    "python": "3.13.9",
+    "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "torch": "2.12.0.dev20260408+cu128",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.0",
+    "matplotlib": "3.10.6",
+    "cuda": true,
+    "gpu": "NVIDIA GeForce RTX 5080"
+  },
+  "config": {
+    "dataset": "ednet_flat",
+    "root": "/home/hamed/Downloads/Research/dataset",
+    "out_root": "/home/hamed/Downloads/Research/P02/PCDT_P2_runs",
+    "max_learners": 20000,
+    "min_seq_len": 10,
+    "max_seq_len": 200,
+    "train_frac": 0.5,
+    "val_frac": 0.1,
+    "test_frac": 0.4,
+    "split_mode": "learner",
+    "param_budget": 350000,
+    "param_tolerance": 0.05,
+    "batch_size": 64,
+    "weight_decay": 1e-05,
+    "max_epochs": 30,
+    "patience": 5,
+    "grad_clip": 5.0,
+    "search_lrs": [
+      0.0005,
+      0.001,
+      0.002
+    ],
+    "use_persistence": true,
+    "dkvmn_legacy_lag": false,
+    "tau0_seconds": 3600.0,
+    "session_gap_s": 1200,
+    "reliability_floor": 0.6,
+    "convergent_floor": 0.3,
+    "simulator_recovery_floor": 0.5,
+    "min_meaningful_auc_delta": 0.01,
+    "warm_min_history": 5,
+    "min_learners_bucket": 300,
+    "min_points_bucket": 2000,
+    "utility_thresholds": [
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7
+    ],
+    "n_bootstrap": 2000,
+    "ece_bins": 15,
+    "seeds": [
+      20260202,
+      20260203,
+      20260204
+    ],
+    "seed_index": 2,
+    "allow_fixture": false
+  },
+  "inputs": [],
+  "missing_inputs": [],
+  "n_outputs": 12,
+  "outputs": [
+    {
+      "path": "audited_subset_ednet_flat.json",
+      "bytes": 2759,
+      "sha256": "935b644a5c2f04ed697105c6b7908197198748d44bac15c37fab1f9d1f12ec6b"
+    },
+    {
+      "path": "tables/table0_dataset_characteristics.csv",
+      "bytes": 263,
+      "sha256": "1549316f5289cb3a60268200782ba03627a72eace6abaea304d9e3e5f9de377e"
+    },
+    {
+      "path": "tables/table0_dataset_characteristics.tex",
+      "bytes": 433,
+      "sha256": "6cb4ce6ded6dc183da4429664b5ac72b39b1cf3e4eb194b603fb67d77514fa09"
+    },
+    {
+      "path": "tables/table1_audit_ednet_flat.csv",
+      "bytes": 1576,
+      "sha256": "2ebad862a2b33d64b0c84d957c457fb59d1de4f6e3971ef4adfbf340e558eeb9"
+    },
+    {
+      "path": "tables/table1_audit_ednet_flat.tex",
+      "bytes": 1649,
+      "sha256": "1e2ef8125bf0bead65df11031031cc7b36263aaaacf3591d50b5fbb16ad33a33"
+    },
+    {
+      "path": "tables/table1_convergent_matrix.csv",
+      "bytes": 243,
+      "sha256": "c43d3bd7fa23a897e115515cb02c6799b99a2bc3e84a65ef0e064bc15e04c645"
+    },
+    {
+      "path": "tables/table1_convergent_matrix.tex",
+      "bytes": 273,
+      "sha256": "e9ff69bbb21da131aeda201fc547e0dc1700f9fda0dfeb6379b4bf3b943fb216"
+    },
+    {
+      "path": "tables/table1_verdict_matrix.csv",
+      "bytes": 166,
+      "sha256": "0c1c0aa01d178dd806d12b153aec1a340f464afb7778ec5b729139bbd19763b7"
+    },
+    {
+      "path": "tables/table1_verdict_matrix.tex",
+      "bytes": 272,
+      "sha256": "9889ebd3d39f4002ec0bc3d4187530a5440c59dba7d6fe2fe7cd3dc5cd58fa47"
+    },
+    {
+      "path": "figures/fig1_convergent_validity.pdf",
+      "bytes": 15358,
+      "sha256": "551fdec1aebaddb2662d5c6ce7385b40956c10c8951b8831bbd6b8aebc745948"
+    },
+    {
+      "path": "figures/fig1_convergent_validity.png",
+      "bytes": 86436,
+      "sha256": "32b1e1e546dd71d5d93ddf9b2f7d6c5c7ade9542a6bd6810e2ccdcbc43384b0f"
+    },
+    {
+      "path": "logs/console.log",
+      "bytes": 5441,
+      "sha256": null,
+      "note": "not hashed: the run's own completion banner is appended to this file after the manifest is assembled"
+    }
+  ],
+  "concurrent_runs": {
+    "RQ1__junyi__seed0": 2
+  },
+  "foreign_writes": [],
+  "unattributed_writes": [],
+  "isolation_ok": true,
+  "isolation_check_version": 2,
+  "fixture_inputs": [],
+  "trustworthy": true,
+  "research_question": "RQ1",
+  "dataset": "ednet_flat",
+  "seed": 20260204,
+  "seed_index": 2,
+  "dataset_stats": {
+    "ednet_flat": {
+      "n_learners": 15235,
+      "n_interactions": 5071150,
+      "n_kc": 142,
+      "n_items": 12111,
+      "correct_rate": 0.6683154702186584,
+      "median_span_days": 1.2094625578703704,
+      "mean_span_days": 69.35445082369574
+    }
+  },
+  "audited_subset": [
+    "C_t",
+    "H_t",
+    "I_t"
+  ],
+  "data_paths": {
+    "flat": "/home/hamed/Downloads/Research/dataset/EdNet/ednet_kt1_flat.csv"
+  }
+}
