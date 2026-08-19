@@ -97,7 +97,7 @@ All are capacity-matched to 350,000 parameters ± 5% and tuned over the same lea
 
 Counts are for the primary seed. Each seed draws its own 20,000-learner subsample before the minimum-sequence-length filter, so learner and interaction counts differ slightly between seeds — the notebooks state this explicitly and record the seed alongside the counts.
 
-All three datasets are publicly available from their original providers; this repository does not redistribute them. Set the local paths in each notebook's configuration cell.
+Set the local paths in each notebook's configuration cell. See [Data availability](#data-availability) below.
 
 ## Installation
 
@@ -167,6 +167,12 @@ Six of eight models reproduce to full precision across runs. **AKT and SAKT do n
 
 Every number reported in the manuscript is recomputed programmatically from the run artifacts; none is transcribed by hand.
 
+## Data availability
+
+The source datasets — **ASSISTments 2020-21**, **EdNet-KT1**, and **Junyi Academy** — are publicly available from their original providers and are not redistributed in this repository.
+
+The processed data derived in this study — the per-seed learner subsamples, the gap-stratified learner-level splits, the constructed behavioural features, and the complete run artifacts including saved test predictions — are available upon reasonable request. Please contact Syed Hamed Raza (Email: dr.hamedraza@gmail.com / sp24-pcs-007@cuilahore.edu.pk) or the corresponding author for data access.
+
 ## Citation
 
 ```bibtex
@@ -187,6 +193,9 @@ Department of Computer Science, COMSATS University Islamabad, Lahore Campus, Pak
 Supervised by **Dr. Abid Sohail**.
 
 ## Contact
+
+**Syed Hamed Raza**
+dr.hamedraza@gmail.com · sp24-pcs-007@cuilahore.edu.pk
 
 For questions about the code, please open an issue in this repository.
 
