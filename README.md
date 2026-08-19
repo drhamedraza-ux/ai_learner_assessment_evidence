@@ -184,7 +184,7 @@ Every number reported in the manuscript is recomputed programmatically from the 
 **Syed Hamed Raza**
 Department of Computer Science, COMSATS University Islamabad, Lahore Campus, Pakistan
 
-Supervised by **Dr. Abid Sohail**, with **Dr. Farooq Ahmad** and **Dr. Muhammad Hasanain Chaudary**.
+Supervised by **Dr. Abid Sohail**.
 
 ## Contact
 
