@@ -200,5 +200,5 @@ dr.hamedraza@gmail.com · sp24-pcs-007@cuilahore.edu.pk
 For questions about the code, please open an issue in this repository.
 
 ## License
-
+This repository is intended for academic and non-commercial research purposes.
 <!-- Choose a license before the repository is made public; MIT is common for academic code. -->
