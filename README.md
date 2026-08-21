@@ -197,7 +197,8 @@ Supervised by **Dr. Abid Sohail**.
 **Syed Hamed Raza**
 dr.hamedraza@gmail.com · sp24-pcs-007@cuilahore.edu.pk
 
-For questions about the code, please open an issue in this repository.
+**Corresponding Author: Dr. Abid Sohail**
+abidbhutta@cuilahore.edu.pk
 
 ## License
 This repository is intended for academic and non-commercial research purposes.
